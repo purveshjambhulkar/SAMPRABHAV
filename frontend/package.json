@@ -11,9 +11,9 @@
     "cra-template": "1.2.0",
     "ionicons": "^7.4.0",
     "lucide-react": "^0.474.0",
-    "react": "^18.2.0",                // Updated React version
+    "react": "^19.0.0",
     "react-countup": "^6.5.3",
-    "react-dom": "^18.2.0",            // Updated ReactDOM version
+    "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.4",
     "react-scripts": "5.0.1",
     "remixicon": "^4.6.0",
