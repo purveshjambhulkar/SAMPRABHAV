@@ -54,3 +54,5 @@ cython.pyx
 
 # Sphinx documentation
 docs/_build/
+node_modules/
+package-lock.json
