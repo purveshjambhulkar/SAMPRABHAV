@@ -1,0 +1,100 @@
+/* Footer.css */
+
+/* Main container using a teal–blue gradient */
+.footer-container {
+  background: linear-gradient(135deg, #0288d1, #00695c);
+  color: #ffffff;
+  /* Remove any extra padding at top and bottom if not needed */
+}
+
+/* Contact Section */
+.contact-area {
+  padding: 20px 0; /* Reduced vertical padding */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for improved readability */
+}
+
+.contact-content {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.contact-content img {
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-content p {
+  font-size: 15px;
+  margin: 20px 0 40px; /* Reduced margin from 30px/60px to 20px/40px */
+  position: relative;
+  color: #ffffff;
+}
+
+.contact-content p::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Reduced gap below paragraph */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: #80deea;
+}
+
+.contact-content h6 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 5px; /* Reduced margin */
+  color: #e0f7fa;
+}
+
+.contact-content span {
+  margin: 0 5px; /* Slightly reduced gap between phone numbers */
+  color: #e0f7fa;
+}
+
+/* Social Icons */
+.contact-social {
+  margin-top: 20px; /* Reduced top margin */
+}
+
+.contact-social > ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-social ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #80deea;
+  border-radius: 50%;
+  color: #80deea;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.contact-social ul li a:hover {
+  border-color: #00bcd4;
+  color: #00bcd4;
+  transform: translateY(-3px); /* Slightly reduced lift */
+}
+
+/* Footer Section */
+footer {
+  padding: 10px 0; /* Reduced padding for a more compact footer */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 14px; /* Optionally reduce font size */
+}

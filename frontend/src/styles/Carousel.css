@@ -1,0 +1,40 @@
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Carousel Styles */
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  object-fit: cover; /* Ensure images cover the entire area */
+}
+
+/* Overlay for Navbar and Header */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Ensure it's above the carousel */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3); /* Optional: Add a semi-transparent overlay */
+}
+
+/* Adjust Navbar and Header Positioning */
+nav {
+  position: relative; /* Override fixed positioning */
+  background: transparent; /* Make Navbar transparent */
+}
+
+.header__container {
+  padding-top: 0; /* Remove extra padding */
+  margin-top: -8rem; /* Adjust as needed */
+}

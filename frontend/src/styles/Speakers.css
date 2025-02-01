@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.speakers-speakers-container {
+  text-align: center;
+  padding: 50px;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.speakers-title {
+  font-size: 42px;
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #777777;
+  max-width: 80vw;
+}
+
+.speakers-chief-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.speakers-chief-guest img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.speakers-chief-guest img:hover {
+  transform: scale(1.08);
+}
+
+.speakers-chief-guest .speakers-info {
+  text-align: left;
+  max-width: 400px;
+}
+
+.speakers-chief-guest h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222856;
+}
+
+.speakers-chief-guest .speakers-description {
+  font-size: 18px;
+  color: #666;
+}
+ 
+.speakers-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.speakers-carousel {
+  display: flex;
+  gap: 20px;
+  animation: slide 15s linear infinite; /* Adjust duration as needed */
+  width: max-content; /* Key for smooth scrolling */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust for full loop */
+  }
+}
+
+.speakers-speaker-card {
+  flex: 0 0 auto;
+  width: 200px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 3px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assests/Speakers/background.jpg") center/cover no-repeat;
+  filter: blur(10px);
+  z-index: 0; /* Keeps the blur behind the PNG */
+}
+
+/* PNG Image */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1; /* Ensures PNG stays above the blur */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Assign colors to cards */
+.speakers-speaker-card:nth-child(3n + 1) {
+  border-color: rgb(148, 148, 148); /* Vibrant Red fc278a76*/
+}
+
+.speakers-speaker-card:nth-child(3n + 2) {
+  border-color: rgb(148, 148, 148); /* Bright Blue rgb(148, 148, 148)*/
+}
+
+.speakers-speaker-card:nth-child(3n + 3) {
+  border-color: rgb(148, 148, 148); /* Lime Green f9d46497*/
+}
+
+.speakers-speaker-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.speakers-speaker-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Ensure the border remains fully visible on hover */
+.speakers-speaker-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* Ensures the scaling does not overflow the card */
+}
+
+
+.speakers-speaker-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  border-radius: 12px;
+  object-fit: contain; /* Or cover, depending on your preference */
+  transition: transform 0.3s ease-in-out;
+}
+
+.speakers-speaker-card:hover img {
+  transform: scale(1.1);
+}
+
+.speakers-speaker-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.speakers-speaker-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #222856;
+}
+
+.speakers-speaker-card .speakers-description {
+  font-size: 12px;
+  color: #666;
+}
+
+.speakers-carousel-wrapper:hover .speakers-carousel {
+  animation-play-state: paused;
+  transition: transform 0.5s ease; /* Smooth transition on pause */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .speakers-speakers-container {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .speakers-title {
+    font-size: 32px; /* Smaller title on mobile */
+  }
+
+  .speakers-chief-guest {
+    flex-direction: column; /* Stack chief guest info vertically */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .speakers-chief-guest .speakers-info {
+    text-align: center; /* Center text in chief guest info */
+    max-width: 90%;
+  }
+
+  .speakers-carousel-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling on mobile */
+    scroll-snap-type: x mandatory; /* Use for snapping to cards */
+    -webkit-overflow-scrolling: touch; /* Improve scrolling performance on iOS */
+  }
+
+  .speakers-carousel {
+    animation: none; /* Disable auto-scrolling on mobile */
+    flex-wrap: nowrap; /* Prevent cards from wrapping */
+    gap: 10px;
+  }
+
+  .speakers-speaker-card {
+    min-width: 160px; /* Smaller card width */
+    scroll-snap-align: center; /* Snap to the center of the card */
+  }
+
+  .speakers-speaker-card img {
+    height: 140px; /* Adjust image height */
+  }
+}
