@@ -508,3 +508,62 @@ nav {
     display: none;
   }
 }
+/* Navbar in Mobile View */
+@media (max-width: 768px) {
+  .nav__header {
+    padding: 1rem; /* Reduce padding to fit better in mobile view */
+    background: transparent; /* Make the navbar background transparent */
+    position: fixed; /* Ensure navbar is fixed at the top */
+    top: 0; /* Align it to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above the carousel */
+  }
+
+  .nav__links {
+    padding: 2rem 1rem;
+    gap: 1.5rem; /* Reduce the gap between links */
+    background-color: transparent; /* Make the navbar links background transparent */
+  }
+
+  /* Adjust navbar height in mobile view */
+  nav {
+    height: 60px; /* Reduce navbar height */
+  }
+
+  /* Add margin to header content to prevent overlap */
+  .header__container {
+    margin-top: 60px; /* Add space for navbar */
+  }
+
+  .header__image__card {
+    padding: 0.5rem 0.75rem; /* Adjust padding to make room for the navbar */
+  }
+
+  /* Adjust logo size for mobile */
+  .logo-inside img {
+    max-width: 120px; /* Limit logo size on mobile */
+    padding: 0.5rem; /* Reduce unnecessary padding */
+  }
+}
+
+/* Ensure the carousel is not hidden under the navbar */
+.carousel-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  z-index: 1; /* Set a lower z-index for the carousel */
+}
+
+
+@media (max-width: 768px) {
+  .nav__links {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .nav__links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
