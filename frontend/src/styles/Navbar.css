@@ -330,7 +330,7 @@ nav {
   columns: var(--text-light);
   line-height: 1.75rem;
   text-align: center;
-  transition: color 0.5s ease-in-out; /* Smooth color transition */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 .header__content form {
@@ -343,7 +343,7 @@ nav {
   gap: 1rem 0;
   border-radius: calc(1rem + 10px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.5s ease-in-out; /* Smooth box-shadow transition */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth box-shadow transition */
 }
 
 .header__content .input__row {
@@ -556,14 +556,3 @@ nav {
 }
 
 
-@media (max-width: 768px) {
-  .nav__links {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  .nav__links.open {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
