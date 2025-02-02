@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom"; // Import Link
 import styles from "../styles/Features.module.css";
 
 // Importing images
@@ -12,12 +13,12 @@ import topicIcon from "../assests/Features/topic.png";
 import testimonialIcon from "../assests/Features/testimonial.png";
 
 const featuresData = [
-  { title: "Speakers", count: 12, icon: conferenceIcon },
+  { title: "Speakers", count: 12, icon: conferenceIcon, link: "#speakers" },
   { title: "Students", count: 800, icon: studentIcon, hasPlus: true },
   { title: "Colleges", count: 40, icon: universityIcon, hasPlus: true },
-  { title: "Sponsors", count: 11, icon: dealIcon, hasPlus: true },
+  { title: "Sponsors", count: 11, icon: dealIcon, hasPlus: true, link: "#sponsors" },
   { title: "Topics", count: 5, icon: topicIcon, hasPlus: true },
-  { title: "Testimonials", count: 5, icon: testimonialIcon },
+  { title: "Testimonials", count: 5, icon: testimonialIcon, link: "/testimonials" },
 ];
 
 const Features = () => {
@@ -71,7 +72,15 @@ const Features = () => {
               )}
               {feature.hasPlus && "+"}
             </h3>
-            <p className={styles.featureTitle}>{feature.title}</p>
+            <p className={styles.featureTitle}>
+              {feature.link ? (
+                <Link to={feature.link} className={styles.featureLink}>
+                  {feature.title}
+                </Link>
+              ) : (
+                feature.title
+              )}
+            </p>
           </div>
         ))}
       </div>

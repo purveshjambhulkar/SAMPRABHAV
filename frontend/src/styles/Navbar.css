@@ -20,6 +20,7 @@
 img {
   display: flex;
   width: 100%;
+  
 }
 
 a {
@@ -225,7 +226,7 @@ nav {
 .header__container {
   max-width: var(--max-width);
   margin: auto;
-  padding-block: 8rem 2rem;
+  padding-block: 1rem 2rem;
   padding-inline: 1rem;
   display: grid;
   gap: 2rem;
@@ -253,6 +254,7 @@ nav {
 
 .header__image::before {
   position: absolute;
+  
   content: "";
   width: 100%;
   max-width: 550px;
@@ -268,12 +270,15 @@ nav {
   opacity: 0.5;
   z-index: -1;
   transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+  filter: brightness(1.2); /* Add a filter to make the background lighter */
 }
 
 .header__image img {
   max-width: 520px;
   margin-inline: auto;
   transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+  border-radius: 30%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image fits well insid /* Smooth transform transition */
 }
 
 .header__image__card {
@@ -348,7 +353,7 @@ nav {
 
 .header__content form {
   margin-bottom: 4rem;
-  padding: 1.5rem;
+  padding: -1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -642,3 +647,44 @@ section {
   z-index: 1; /* Set a lower z-index for the carousel */
 }
 
+/* Add these styles at the end of your CSS file */
+
+/* Desktop View Adjustments */
+@media (width > 768px) {
+  .header__container {
+    align-items: start; /* Align items to the top */
+    padding-top: 0rem; /* Add space at the top */
+  }
+
+  .header__image img {
+    max-width: 420px; /* Reduced from 520px */
+    margin-left: 5rem;/* Keep image right-aligned */
+    margin-right: 2rem; /* Add spacing from right edge */
+    margin-top: 0px;
+  }
+
+  .header__content {
+    padding-right: 3rem; /* Add spacing between text and image */
+    margin-top: 2rem; /* Align with image top */
+  }
+
+  .header__content h1 {
+    font-size: 4rem; /* Slightly reduced size */
+    line-height: 4.5rem;
+    text-align: left;
+    max-width: 90%; /* Prevent text from stretching too wide */
+  }
+
+  .header__content p {
+    max-width: 85%; /* Match text width with image proportion */
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* Keep existing mobile media queries intact below */
+.circle{
+  max-width:max-content !important;
+  padding-right: 112px !important;
+  margin-left:60px !important;
+}

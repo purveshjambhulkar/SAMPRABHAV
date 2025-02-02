@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { UserCheck, Award, GraduationCap, CalendarCheck, ChevronDown, ChevronUp } from "lucide-react";
 import "../styles/FAQ.css";
 import { FaArrowRight, FaSearchPlus, FaArrowLeft } from 'react-icons/fa';
-import logo from '../assests/logo.png';
+import logo from '../assests/black-logo.png';
 
 
 // Import decorative background images

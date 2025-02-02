@@ -4,11 +4,10 @@ import styles from "../styles/Sponsors.module.css"; // Import CSS Module
 // Importing images from assets
 import ADM from "../assests/Sponsors/ADM.png";
 import SAPIENS from "../assests/Sponsors/SAPIENS.png";
-import TORQUE from "../assests/Sponsors/TORQUE.jpeg.jpg";
+import TORQUE from "../assests/Sponsors/TORQUE.png";
 import XL from "../assests/Sponsors/XL.png";
-import SCH from "../assests/Sponsors/SCH.png";
-import GURU from "../assests/Sponsors/GURU.jpg";
-import ACC from "../assests/Sponsors/ACC.png";
+import SCH from "../assests/Sponsors/SCH.svg";
+import GURU from "../assests/Sponsors/GURU.png";
 import ROAMING_ROUTES from "../assests/Sponsors/roming-routes.webp";
 import BITTA from "../assests/Sponsors/BITTA.png";
 import CANAM from "../assests/Sponsors/canam.svg";
@@ -47,34 +46,11 @@ const sponsorsData = {
       color: "#004953",
     },
     {
-      name: "Scholavar & Accentale",
+      name: "Scholavar",
       logo: SCH,
       type: "Platinum Sponsor",
       className: styles.platinumBorder,
       color: "#004953",
-    },
-  ],
-  food: [
-    {
-      name: "Guru Nanak Sweets",
-      logo: GURU,
-      type: "Food Sponsor",
-      className: styles.foodBorder,
-      color: "#B8860B",
-    },
-    {
-      name: "Accentale",
-      logo: ACC,
-      type: "Certificate Sponsor",
-      className: styles.foodBorder,
-      color: "#B8860B",
-    },
-    {
-      name: "Roaming Routes 360",
-      logo: ROAMING_ROUTES,
-      type: "Food Sponsor",
-      className: styles.foodBorder,
-      color: "#B8860B",
     },
   ],
   gold: [
@@ -91,6 +67,22 @@ const sponsorsData = {
       type: "Gold Sponsor",
       className: styles.goldBorder,
       color: "#4B0082",
+    },
+  ],
+  food: [
+    {
+      name: "Guru Nanak Sweets",
+      logo: GURU,
+      type: "Food Sponsor",
+      className: styles.foodBorder,
+      color: "#B8860B",
+    },
+    {
+      name: "Roaming Routes 360",
+      logo: ROAMING_ROUTES,
+      type: "Travel Sponsor",
+      className: styles.foodBorder,
+      color: "#B8860B",
     },
   ],
 };

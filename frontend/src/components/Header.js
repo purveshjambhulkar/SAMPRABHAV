@@ -21,14 +21,14 @@ const Header = () => {
   return (
     <header className="header__container">
       <div className="header__image">
-        <img src={header} alt="header" />
+        <img src={header} className='circle' alt="header" />
       </div>
       <div className="header__content">
         <h1>
           SAMPRABHAV 2025<br /> <span style={{ color: '#0286c8' }}>NIPER MOHALI</span>
         </h1>
         <p style={{ color: "white", fontWeight: 600 }}>
-          Join SAMPRABHAV 2026 at NIPER Campus Mohali, Punjab on February 22-23, featuring 12+ speakers sharing insights on pharmaceutical management. Don't miss this premier event for knowledge exchange and networking!
+          Join SAMPRABHAV 2025 at NIPER Campus Mohali, Punjab on February 22-23, featuring 12+ speakers sharing insights on pharmaceutical management. Don't miss this premier event for knowledge exchange and networking!
         </p>
         <form action="/">
           <div className="input__row">

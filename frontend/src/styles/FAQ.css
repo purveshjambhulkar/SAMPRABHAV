@@ -108,7 +108,8 @@
   height: 120px;
   width: auto;
   display: block;
-  filter: invert(100%) brightness(100%);
+  margin-left: -42px;
+  /* filter: invert(100%) brightness(100%); */
 }
 
 /* Back Button */
@@ -123,6 +124,7 @@
   cursor: pointer;
   padding: 0.5rem;
   transition: color 0.3s ease;
+  margin-right: -57px;
 }
 
 .top-nav .back-button:hover {
