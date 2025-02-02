@@ -1,188 +1,245 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
-
-.about-about-container {
-    position: relative;
-    padding-top: 200px;
-    background-color: #ffffff;
-    overflow: hidden;
+.about-section {
+  position: relative;
+  padding: 120px 0 70px;
 }
 
-.about-contain-image {
-    width: 65vw;
-    background: linear-gradient(to left, #afb2bc, #d5d9df);
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 30vw;
+.about-section .auto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Added this to make sure columns wrap on small screens */
 }
 
-.about-contain-image img {
-    width: 450px;
-    position: relative;
-    z-index: 1;
-    margin-right: 10vw;
+.about-section .content-column,
+.about-section .image-column {
+  position: relative;
+  margin-bottom: 50px;
+  flex: 1;  /* This ensures both columns take up equal space */
+  max-width: 50%;  /* Limiting the width of both columns to 50% */
 }
 
-.about-greeting {
-    position: absolute;
-    font-size: 100px;
-    font-weight: 900;
-    width: 700px;
-    left: 150px;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: #222856;
+.about-section .content-column {
+  padding-left: 80px;  /* Added margin from the left */
+  padding-right: 10px; /* Adjusted margin on the right side */
 }
 
-.about-greeting span {
-    font-family: "Alex Brush", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 56px;
+.about-section .image-column {
+  padding-left: 10px;  /* Adjusted margin on the left side */
+  padding-right: 80px; /* Added margin from the right */
 }
 
-.about-main-about p { /* If you have a main-about class, rename it too */
-    font-size: 22px;
-    margin-top: 20px;
-    max-width: 55vw;
-    margin-left: 10vw;
-    color: gray;
+.about-section .content-column .inner-column {
+  position: relative;
+  padding-right: 80px;
 }
 
-.about-about {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+.about-section .content-column .sec-title {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.about-about span {
-    font-size: 52px;
-    font-weight: 900;
-    color: #222856;
+.about-section .content-column .sec-title .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Blue color */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
-.about-about p {
-    max-width: 50vw;
-    color: #666666;
-    font-size: 22px;
-    text-align: center;
-    padding-bottom: 100px;
+.about-section .content-column .sec-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #007bff; /* Blue color */
+  margin-top: 20px;
+  line-height: 1.4;
+  text-align: center;  /* Centered the heading */
 }
 
-/* Rotating Image */
-.rotating-image {
-    position: absolute;
-    bottom: 0px; /* Moves it slightly down */
-    right: -150px; /* Positions half outside */
-    width: 300px; /* Adjust size */
-    height: auto;
-    animation: rotate 30s infinite; /* Apply the correct animation */
-    opacity: 0.7; /* Shows only half of the image */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 11;
+.about-section .content-column .sec-title .text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff5733; /* Changed color to a warmer tone */
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-/* Rotation Animation */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.about-section .content-column .list-style-one {
+  margin-bottom: 30px;
 }
 
-  
-  /* Responsive Fix */
-  @media screen and (max-width: 768px) {
-    .rotating-image {
-      width: 150px; /* Smaller size on mobile */
-      right: -50px; /* Adjust for mobile */
-      display: none;
-    }
+.about-section .content-column .btn-box {
+  position: relative;
+  text-align: center;
+}
+
+.about-section .content-column .btn-box a {
+  padding: 15px 30px;
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.about-section .content-column .btn-box a:hover {
+  background-color: #0056b3;
+}
+
+.about-section .image-column {
+  display: flex;
+  justify-content: center;  /* Centering the image horizontally */
+  align-items: center;  /* Centering the image vertically */
+  margin-bottom: 50px;
+}
+
+.about-section .image-column .image-box {
+  position: relative;
+  padding-left: 80px;
+}
+
+.about-section .image-column .image-box img {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  border: 15px solid #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
+}
+
+.about-section .image-column .image {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.about-section .image-column .image:before {
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  height: 120%;
+  width: 120%;
+  background-image: url(../assests/icons/shape-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  animation: dizzling 10s infinite;
+  transition: all 300ms ease;
+  content: "";
+}
+
+@keyframes dizzling {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.icon-shape-1 {
+  width: 484px;
+  height: 225px;
+  background-image: url(../assests/icons/shape-1.png);
+}
+
+.icon-shape-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(../assests/icons/shape-2.png);
+}
+
+.icon-line-1 {
+  width: 128px;
+  height: 128px;
+  background-image: url(../assests/icons/icon-line-1.png);
+}
+
+.icon-dots {
+  width: 72px;
+  height: 60px;
+  background-image: url(../assests/icons/icon-dots.png);
+}
+
+.icon-dots-3 {
+  width: 204px;
+  height: 114px;
+  background-image: url(../assests/icons/icon-dots-3.png);
+}
+
+.icon-circle-1 {
+  width: 500px;
+  height: 500px;
+  background-image: url(../assests/icons/icon-circle-1.png);
+  background-size: 100%;
+}
+
+.icon-circle-blue {
+  width: 300px;
+  height: 300px;
+  background-image: url(../assests/icons/circle-blue.png);
+}
+
+.about-section .icon-circle-blue {
+  right: -150px;
+  bottom: -150px;
+  opacity: .70;
+  animation: fa-spin 30s infinite;
+}
+
+.about-section .icon-dots {
+  left: 50%;
+  top: 30%;
+}
+
+.about-section .icon-circle-1 {
+  left: -200px;
+  top: -200px;
+  opacity: .05;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section .auto-container {
+    flex-direction: column;  /* Stack the columns vertically on smaller screens */
+    gap: 30px;
   }
 
-/* ======== MOBILE RESPONSIVENESS ======== */
-@media screen and (max-width: 768px) {
-    .about-about-container {
-        margin-top: 10vh;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-    }
+  .about-section .content-column,
+  .about-section .image-column {
+    max-width: 100%;  /* Full width for both columns */
+    padding: 0;
+  }
 
-    .about-greeting {
-        position: static;
-        font-size: 50px;
-        width: 100%;
-        text-align: center;
-        top: auto;
-        left: auto;
-    }
+  .about-section .content-column .sec-title .title {
+    font-size: 18px;
+  }
 
-    .about-greeting span {
-        font-size: 36px;
-    }
+  .about-section .content-column .sec-title h2 {
+    font-size: 30px;
+  }
 
-    .about-main-about { /* If you have a main-about class, rename it too */
-        width: 100%;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .about-section .content-column .sec-title .text {
+    font-size: 16px;  /* Adjusted text size for mobile */
+  }
 
-    .about-contain-image {
-        width: 100%;
-        justify-content: center;
-        background: linear-gradient(to left, #afb2bc, #d5d9df);
-        margin-left: 0px;
-    }
+  .about-section .content-column .btn-box a {
+    font-size: 14px;
+    padding: 12px 24px;  /* Smaller button size */
+  }
 
-    .about-contain-image img {
-        width: 80%;
-        max-width: 300px;
-        margin-right: 0;
-    }
-
-    .about-about {
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .about-about span {
-        font-size: 36px;
-    }
-
-    .about-about p {
-        font-size: 18px;
-        width: 90%;
-        max-width: 90%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .about-greeting {
-        font-size: 40px;
-    }
-
-    .about-greeting span {
-        font-size: 28px;
-    }
-
-    .about-about span {
-        font-size: 32px;
-    }
-
-    .about-about p {
-        font-size: 16px;
-    }
+  .about-section .image-column .image-box img {
+    width: 100%;  /* Make image responsive */
+    height: auto;
+    border-radius: 10px;  /* Reduced border radius */
+  }
 }

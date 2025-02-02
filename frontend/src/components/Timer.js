@@ -13,7 +13,7 @@ const Timer = () => {
   }, []);
 
   function calculateTimeLeft() {
-    const targetDate = new Date("February 22, 2026 00:00:00").getTime();
+    const targetDate = new Date("February 22, 2025 00:00:00").getTime();
     const currentTime = new Date().getTime();
     const difference = targetDate - currentTime;
 

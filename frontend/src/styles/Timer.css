@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40vh;
+  min-height: 30vh;
   padding: 20px;
   background: linear-gradient(135deg, #0072ff, #00c6ff, #0099cc); /* Enhanced gradient */
 }
@@ -13,15 +13,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;  /* Reduced gap */
   font-family: 'Roboto', sans-serif;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   border-radius: 15px;
-  padding: 40px;
+  padding: 30px;  /* Reduced padding */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   color: #fff;
   backdrop-filter: blur(10px); /* Frosted glass effect */
-  max-width: 90%;
+  max-width: 80%; /* Shrink the overall size */
 }
 
 /* Time block styling */
@@ -30,23 +30,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;  /* Reduced padding */
   background-color: rgba(255, 255, 255, 0.1); /* Light background for each block */
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  min-width: 120px;
+  min-width: 100px;  /* Reduced width */
 }
 
 /* Number styling */
 .time-number {
-  font-size: 4rem;
+  font-size: 2.8rem;  /* Reduced font size */
   font-weight: 700;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Label styling */
 .time-label {
-  font-size: 1.2rem;
+  font-size: 1rem;  /* Slightly smaller label font size */
   margin-top: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -69,67 +69,67 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .timer {
-    padding: 30px;
-    gap: 20px;
+    padding: 25px;
+    gap: 15px;
   }
 
   .time-block {
-    min-width: 100px;
-    padding: 15px;
+    min-width: 90px;  /* Further reduce time block width */
+    padding: 12px;
   }
 
   .time-number {
-    font-size: 3.5rem;
+    font-size: 2.5rem;  /* Smaller font size for medium screens */
   }
 
   .time-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
   .timer {
     flex-direction: column;
-    gap: 15px;
-    padding: 25px;
+    gap: 10px;
+    padding: 20px;
   }
 
   .time-block {
     width: 100%;
-    max-width: 180px;
+    max-width: 160px;
     margin: auto;
   }
 
   .time-number {
-    font-size: 3rem;
+    font-size: 2.2rem;  /* Smaller font size for mobile */
   }
 
   .time-label {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .timer-container {
-    min-height: 30vh;
-    padding: 10px;
+    min-height: 25vh;  /* Adjusted height */
+    padding: 8px;
   }
 
   .timer {
-    padding: 20px;
-    gap: 10px;
+    padding: 15px;
+    gap: 8px;
   }
 
   .time-block {
-    padding: 10px;
-    min-width: 80px;
+    padding: 8px;
+    min-width: 70px;  /* Reduced block width */
   }
 
   .time-number {
-    font-size: 2.5rem;
+    font-size: 2rem;  /* Further reduced font size */
   }
 
   .time-label {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }

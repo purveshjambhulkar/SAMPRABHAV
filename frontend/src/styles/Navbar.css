@@ -230,7 +230,20 @@ nav {
   display: grid;
   gap: 2rem;
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: padding 0.3s ease-in-out; /* Smooth padding transition */
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    visibility: visible;
+  }
+  .nav__links.open {
+    visibility: visible;
+  }
+  .nav__menu__btn {
+    display: block;
+  }
 }
 
 .header__image {
@@ -567,3 +580,65 @@ nav {
     display: block;
   }
 }
+
+section {
+  scroll-margin-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+/* Ensure input group text is visible */
+.header__content .input__group h5 {
+  color: white !important; /* Make the text white */
+  font-weight: 600; /* Bold text */
+}
+
+/* Style the input fields */
+.header__content input {
+  color: white; /* White text for input */
+  font-weight: 500; /* Medium weight */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+}
+
+.header__content input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Semi-transparent placeholder */
+}
+
+/* Style the register button */
+.header__content button {
+  background-color: #0286c8;
+  color: white;
+  font-weight: 600;
+  border: none;
+  margin-top: 10px;
+  margin-left: 45px;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header__content button {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__container{
+    overflow-y: auto;
+  }
+}
+
+.header__content button:hover {
+  background-color: #0272a3; /* Darker blue on hover */
+}
+/* Ensure the carousel is not hidden under the navbar */
+.carousel-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  z-index: 1; /* Set a lower z-index for the carousel */
+}
+

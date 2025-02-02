@@ -1,0 +1,140 @@
+.sponsors-container {
+    text-align: center;
+    margin: 3rem 0;
+    z-index: 10;
+    position: relative;
+    overflow: visible; /* Changed from hidden to visible */
+}
+
+.sponsors-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #222856;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.img-container-sponsors {
+    background-image: url("../assests/Sponsors/backg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.sponsors-title span {
+    font-weight: 700;
+}
+
+.sponsor-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.sponsor-card {
+    background: #e5f4f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-card img {
+    height: 60px;
+    width: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.sponsor-name {
+    color: #222856;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-type {
+    font-weight: 600;
+}
+
+.title-border {
+    border: 3px solid #1c8bd2;
+}
+
+.platinum-border {
+    border: 3px solid #1c8bd2;
+}
+
+.food-border {
+    border: 3px solid #1c8bd2;
+}
+
+.gold-border {
+    border: 3px solid #1c8bd2;
+}
+
+/* Left image positioning */
+.sponsors-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20%; /* Position the image 20% outside the left side */
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
+    background-image: url('../assests/icons/newCircle.png');
+    transform: translateY(-50%);
+}
+
+/* Right image (static, no rotation) */
+.sponsors-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
+    background-image: url('../assests/icons/newPill.png');
+    transform: translateY(-50%);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .sponsors-container::before {
+        left: -10%; /* Adjust for mobile view */
+        width: 200px; /* Smaller size for mobile */
+        height: 200px; /* Smaller size for mobile */
+    }
+
+    .sponsors-container::after {
+        right: 2%; /* Adjust for mobile view */
+        width: 200px; /* Smaller size for mobile */
+        height: 200px; /* Smaller size for mobile */
+    }
+}

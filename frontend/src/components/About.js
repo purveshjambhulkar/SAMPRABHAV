@@ -1,42 +1,43 @@
-import React from "react";
-import "../styles/About.css";
+import React from 'react';
+import aboutimg from "../assests/about.jpg"; // Make sure this path is correct
+import '../styles/About.css'; // Import the CSS file
 
-// Importing images
-import aboutImage from "../assests/about.png";
-import rotatingImage from "../assests/circle-blue.png";
-
-const AboutComponent = () => {
+const About = () => {
   return (
-    <div className="about-about-container">
-      {/* <span class="icon icon-circle-blue wow fadeIn animated" style="visibility: visible; animation-name: fa-spin;"></span> */}
-      <div className="about-greeting">
-        WELCOME TO SAMPRABHAV 2025
-        <span>Prof. Dulal Panda</span>
+    <section className="about-section">
+      <div className="anim-icons full-width">
+        <span className="icon icon-circle-blue wow fadeIn"></span>
+        <span className="icon icon-dots wow fadeInleft"></span>
+        <span className="icon icon-circle-1 wow zoomIn"></span>
       </div>
-      <div className="about-contain-image">
-        <img src={aboutImage} alt="College host" />
+
+      <div className="auto-container">
+        <div className="row">
+          {/* Content Column */}
+          <div className="content-column col-lg-6 col-md-12 col-sm-12">
+            <div className="inner-column">
+              <div className="sec-title">
+                <span className="title">About Samprabhav</span>
+                <h2>Welcome to the Samprabhav</h2>
+                <div className="text">
+                  Samprabhav – Union of Magnates, is a splendid gathering where industry experts concentrate with budding minds, a fusion that possesses the capability to ignite a small spark capable of spreading into a transformative influence within the pharmaceutical sector. The event's five focal points thoughtfully address all industry dimensions, culminating in a well-rounded and enriching experience. Moreover, after each session, an open Q&A allows every student to seize equal opportunities, gaining deeper insights into industry operations. Thus, the mega event is a testament to student management, exceptional speak sessions, and student brainstorming, making it an all-encompassing program. In totality, it's a mega event that adds up to a great quantum of glory for the Department of Pharmaceutical Management, NIPER S.A.S. Nagar (Mohali).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Image Column */}
+          <div className="image-column col-lg-6 col-md-12 col-sm-12">
+            <div className="image-box">
+              <figure className="image wow fadeIn">
+                <img src={aboutimg} alt="About Samprabhav" />
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="about-about">
-        <span>About Us</span>
-        <p>
-          Established under the aegis of the 1998 National Institute of
-          Pharmaceutical Education and Research Act, NIPER S.A.S. Nagar (Mohali)
-          takes pride in being an institute of National importance. NIPER Mohali
-          is more than just an educational institution, it is a national
-          treasure that has been shaping the future of pharmaceutical education
-          in India. As a member of the Association of Indian Universities and
-          the Association of Commonwealth Universities, the institution's
-          influence extends far beyond national boundaries, garnering
-          recognition on a global scale. The institute’s state-of-the-art
-          facilities and cutting-edge research programs provide students with
-          unparalleled opportunities to engage in breakthrough research and
-          innovation, making an indelible mark on the nation and the world.
-        </p>
-      </div>
-      {/* Rotating Image */}
-      <img src={rotatingImage} alt="Rotating Design" className="rotating-image" />
-    </div>
+    </section>
   );
 };
 
-export default AboutComponent;
+export default About;

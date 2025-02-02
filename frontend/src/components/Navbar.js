@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav>
       <div className="nav__header">
         <div className="nav__logo">
-          <a href="#">
+          <a href="#home">
             <img src={logo} alt="Logo" className="logo-outside" />
           </a>
         </div>
@@ -23,23 +23,22 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      <ul className={`nav__links ${isMenuOpen ? "open" : ""}`}>
-        {/* <li className="logo-inside">
-          <a href="#">
-            <img src={logo} alt="Logo" />
-          </a>
-        </li> */}
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Speakers</a></li>
-        <li><a href="#">Sponsors</a></li>
-        <li><a href="#">Glimpses</a></li>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact</a></li>
+
+      <ul className={`nav__links ${isMenuOpen ? "open" : ""}`} onClick={() => setIsMenuOpen(false)}>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#glimpses">Glimpses</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+
       <div className="nav__btns">
-        <button className="btn sign__in">Register</button>
+        <a href="https://forms.gle/Hcogzn1QKBxKXKUbA" target="_blank" rel="noopener noreferrer">
+          <button className="btn sign__in">Register</button>
+        </a>
       </div>
     </nav>
   );

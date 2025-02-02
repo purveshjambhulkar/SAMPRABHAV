@@ -1,8 +1,16 @@
+/* Prevent overflow on the entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
 /* Carousel Container */
 .carousel-container {
   position: relative;
   height: 100vh; /* Full viewport height */
-  overflow: hidden;
+  overflow: hidden; /* Hide any overflow */
 }
 
 /* Carousel Styles */
@@ -37,4 +45,28 @@ nav {
 .header__container {
   padding-top: 0; /* Remove extra padding */
   margin-top: -8rem; /* Adjust as needed */
+}
+/* Ensure carousel background is not overridden */
+.carousel-item {
+  background: none !important; /* Ensure no background is set */
+}
+
+.carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+} /* Ensure carousel background is not overridden */
+.carousel-item {
+  background: none !important; /* Ensure no background is set */
+}
+
+.carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Ensure the carousel container has the correct background */
+.carousel-container {
+  background: none !important; /* Ensure no background is set */
 }
