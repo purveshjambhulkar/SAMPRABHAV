@@ -14,3 +14,9 @@ code {
 html {
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  body {
+    overflow-x: clip !important;
+  }
+}
+

@@ -1,20 +1,26 @@
-.sponsors-container {
+/* Sponsors.module.css */
+
+.sponsorsContainer {
     text-align: center;
     margin: 3rem 0;
     z-index: 10;
     position: relative;
-    overflow: visible; /* Changed from hidden to visible */
-}
-
-.sponsors-title {
+    overflow: visible;
+  }
+  
+  .sponsorsTitle {
     font-size: 2.8rem;
     font-weight: 300;
     color: #222856;
     margin-bottom: 60px;
     position: relative;
-}
-
-.img-container-sponsors {
+  }
+  
+  .sponsorsTitle span {
+    font-weight: 700;
+  }
+  
+  .imgContainerSponsors {
     background-image: url("../assests/Sponsors/backg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,21 +31,17 @@
     left: 0;
     z-index: -1;
     opacity: 0.5;
-}
-
-.sponsors-title span {
-    font-weight: 700;
-}
-
-.sponsor-row {
+  }
+  
+  .sponsorRow {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1.5rem;
-}
-
-.sponsor-card {
+  }
+  
+  .sponsorCard {
     background: #e5f4f5;
     padding: 1.5rem;
     border-radius: 10px;
@@ -51,90 +53,90 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.sponsor-card:hover {
+  }
+  
+  .sponsorCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.sponsor-card img {
+  }
+  
+  .sponsorCard img {
     height: 60px;
     width: 120px;
     object-fit: contain;
     margin-bottom: 1rem;
     display: block;
-}
-
-.sponsor-name {
+  }
+  
+  .sponsorName {
     color: #222856;
     font-size: 1rem;
     margin-bottom: 0.5rem;
-}
-
-.sponsor-type {
+  }
+  
+  .sponsorType {
     font-weight: 600;
-}
-
-.title-border {
+  }
+  
+  .titleBorder {
     border: 3px solid #1c8bd2;
-}
-
-.platinum-border {
+  }
+  
+  .platinumBorder {
     border: 3px solid #1c8bd2;
-}
-
-.food-border {
+  }
+  
+  .foodBorder {
     border: 3px solid #1c8bd2;
-}
-
-.gold-border {
+  }
+  
+  .goldBorder {
     border: 3px solid #1c8bd2;
-}
-
-/* Left image positioning */
-.sponsors-container::before {
+  }
+  
+  /* Left image positioning */
+  .sponsorsContainer::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: -20%; /* Position the image 20% outside the left side */
-    width: 300px; /* Increased size */
-    height: 300px; /* Increased size */
+    left: -20%;
+    width: 300px;
+    height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: -2;
     background-image: url('../assests/icons/newCircle.png');
     transform: translateY(-50%);
-}
-
-/* Right image (static, no rotation) */
-.sponsors-container::after {
+  }
+  
+  /* Right image (static, no rotation) */
+  .sponsorsContainer::after {
     content: '';
     position: absolute;
     top: 50%;
     right: 5%;
-    width: 300px; /* Increased size */
-    height: 300px; /* Increased size */
+    width: 300px;
+    height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: -2;
     background-image: url('../assests/icons/newPill.png');
     transform: translateY(-50%);
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .sponsors-container::before {
-        left: -10%; /* Adjust for mobile view */
-        width: 200px; /* Smaller size for mobile */
-        height: 200px; /* Smaller size for mobile */
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .sponsorsContainer::before {
+      left: -10%;
+      width: 200px;
+      height: 200px;
     }
-
-    .sponsors-container::after {
-        right: 2%; /* Adjust for mobile view */
-        width: 200px; /* Smaller size for mobile */
-        height: 200px; /* Smaller size for mobile */
+  
+    .sponsorsContainer::after {
+      right: 2%;
+      width: 200px;
+      height: 200px;
     }
-}
+  }

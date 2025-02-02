@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import "../styles/Navbar.css";
 import logo from "../assests/logo.png";
 
+import { Link } from 'react-router-dom';
+
+// In your Navbar component
+
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -29,9 +34,9 @@ const Navbar = () => {
         <li><a href="#about">About</a></li>
         <li><a href="#speakers">Speakers</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#glimpses">Glimpses</a></li>
+       <li><Link to="/glimpse">Glimpses</Link></li>
         <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="/faq">FAQs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 

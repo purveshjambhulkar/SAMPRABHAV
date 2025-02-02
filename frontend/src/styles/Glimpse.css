@@ -1,0 +1,332 @@
+/* General Container Styles */
+.glimpse {
+  position: relative;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.glimpse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo and Button Container */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-nav .logo {
+  height: 116px;
+  width: auto;
+  display: block;
+  margin-left: 122px;
+  filter: invert(100%) brightness(100%);
+}
+
+.top-nav .back-button {
+  display: flex;
+  flex-direction: row; /* Align the icon and text horizontally */
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #3295ce;
+  margin-right: 76px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  height: 50px; /* Set the button height equal to logo's height */
+  margin-left: 20px; /* Add space between logo and button */
+}
+
+.top-nav .back-button:hover {
+  color: #005f7f;
+}
+
+.top-nav .back-text {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Optionally, change the font size of the icon */
+.top-nav .back-button svg {
+  margin-right: 5px;
+}
+
+/* Headings & Descriptions */
+.glimpse-heading {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #3295ce;
+  position: relative;
+}
+
+.glimpse-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.section-title {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #3295ce;
+}
+
+/* Custom List Styles for Speakers & Topics */
+.list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 663px;
+  margin: 0 auto 2rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.list-icon {
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+/* Image Grid: 3 images per row */
+.glimpse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Image Item & Hover Effects */
+.glimpse-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #00bcd4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.glimpse-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.glimpse-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #0097a7;
+}
+
+.glimpse-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay for Zoom Button */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.glimpse-item:hover .overlay {
+  opacity: 1;
+}
+
+.zoom-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Pagination Controls (Centered) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Background Decorative Images */
+.bg-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-decor {
+  position: absolute;
+  opacity: 0.4;
+  animation: float 8s infinite ease-in-out, rotate 10s infinite linear;
+}
+
+/* Increased sizes for the decorative images */
+.decor-1 {
+  top: 13%;
+  left: -4%;
+  width: 244px;
+  animation-delay: 0s;
+}
+
+.decor-2 {
+  top: 31%;
+  right: 1%;
+  width: 277px;
+  animation-delay: 0s;
+}
+
+.decor-3 {
+  bottom: 29%;
+  left: 5%;
+  width: 213px;
+  animation-delay: 4s;
+}
+
+.decor-4 {
+  bottom: 12%;
+  right: 4%;
+  width: 239px;
+  animation-delay: 1s;
+}
+
+/* New Extra Decorative Image (No Animation) */
+.bg-extra {
+  position: absolute;
+  top: -55px;
+  left: 93%;
+  transform: translateX(-51%) rotate(272deg);
+  width: 203px;
+  z-index: 0;
+  display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .glimpse-heading {
+    font-size: 6vw; /* Scales based on viewport width */
+  }
+
+  .glimpse-description {
+    font-size: 4vw;
+    max-width: 90%; /* Prevents it from being too wide */
+    text-align: center; /* Centers the description */
+  }
+
+  .section-title {
+    font-size: 5vw;
+  }
+
+  .list {
+    max-width: 90%;
+    font-size: 4vw; /* Adjusts list text */
+  }
+
+  .list li {
+    display: flex;
+    align-items: center;
+    font-size: 4vw;
+  }
+
+  .glimpse-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .glimpse-item {
+    width: 100%;
+  }
+
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-nav .logo {
+    height: 50px;
+    margin: 0;
+  }
+
+  .top-nav .back-button {
+    height: 50px;
+    font-size: 4vw;
+    margin: 10px 0;
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Rotating Animation */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

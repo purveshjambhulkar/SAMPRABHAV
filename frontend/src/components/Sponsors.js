@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Sponsors.css"; // Import the CSS file
+import styles from "../styles/Sponsors.module.css"; // Import CSS Module
 
 // Importing images from assets
 import ADM from "../assests/Sponsors/ADM.png";
@@ -20,14 +20,14 @@ const sponsorsData = {
       name: "AdametNext",
       logo: ADM,
       type: "Title Sponsor",
-      className: "title-border",
+      className: styles.titleBorder,
       color: "#800020",
     },
     {
       name: "PharmaSapience",
       logo: SAPIENS,
       type: "CoTitle Sponsor",
-      className: "title-border",
+      className: styles.titleBorder,
       color: "#800020",
     },
   ],
@@ -36,21 +36,21 @@ const sponsorsData = {
       name: "Torque Pharmaceuticals",
       logo: TORQUE,
       type: "Platinum Sponsor",
-      className: "platinum-border",
+      className: styles.platinumBorder,
       color: "#004953",
     },
     {
       name: "XL Laboratories Pvt. Ltd.",
       logo: XL,
       type: "Platinum Sponsor",
-      className: "platinum-border",
+      className: styles.platinumBorder,
       color: "#004953",
     },
     {
       name: "Scholavar & Accentale",
       logo: SCH,
       type: "Platinum Sponsor",
-      className: "platinum-border",
+      className: styles.platinumBorder,
       color: "#004953",
     },
   ],
@@ -59,21 +59,21 @@ const sponsorsData = {
       name: "Guru Nanak Sweets",
       logo: GURU,
       type: "Food Sponsor",
-      className: "food-border",
+      className: styles.foodBorder,
       color: "#B8860B",
     },
     {
       name: "Accentale",
       logo: ACC,
       type: "Certificate Sponsor",
-      className: "food-border",
+      className: styles.foodBorder,
       color: "#B8860B",
     },
     {
       name: "Roaming Routes 360",
       logo: ROAMING_ROUTES,
       type: "Food Sponsor",
-      className: "food-border",
+      className: styles.foodBorder,
       color: "#B8860B",
     },
   ],
@@ -82,14 +82,14 @@ const sponsorsData = {
       name: "Bitta Studio",
       logo: BITTA,
       type: "Gold Sponsor",
-      className: "gold-border",
+      className: styles.goldBorder,
       color: "#4B0082",
     },
     {
       name: "Canam",
       logo: CANAM,
       type: "Gold Sponsor",
-      className: "gold-border",
+      className: styles.goldBorder,
       color: "#4B0082",
     },
   ],
@@ -98,10 +98,10 @@ const sponsorsData = {
 // Sponsor Card Component
 const SponsorCard = ({ sponsor }) => {
   return (
-    <div className={`sponsor-card ${sponsor.className}`}>
+    <div className={`${styles.sponsorCard} ${sponsor.className}`}>
       <img src={sponsor.logo} alt={sponsor.name} />
-      <p className="sponsor-name">{sponsor.name}</p>
-      <p className="sponsor-type" style={{ color: sponsor.color }}>
+      <p className={styles.sponsorName}>{sponsor.name}</p>
+      <p className={styles.sponsorType} style={{ color: sponsor.color }}>
         {sponsor.type}
       </p>
     </div>
@@ -110,7 +110,7 @@ const SponsorCard = ({ sponsor }) => {
 
 // Sponsor Row Component
 const SponsorRow = ({ sponsors }) => (
-  <div className="sponsor-row">
+  <div className={styles.sponsorRow}>
     {sponsors.map((sponsor, index) => (
       <SponsorCard key={index} sponsor={sponsor} />
     ))}
@@ -120,9 +120,9 @@ const SponsorRow = ({ sponsors }) => (
 // Main Sponsors Component
 const Sponsors = () => {
   return (
-    <div className="sponsors-container">
-      <div className="img-container-sponsors"></div> {/* Corrected class name */}
-      <h2 className="sponsors-title">
+    <div className={styles.sponsorsContainer}>
+      <div className={styles.imgContainerSponsors}></div>
+      <h2 className={styles.sponsorsTitle}>
         Our <span>Sponsors</span>
       </h2>
 

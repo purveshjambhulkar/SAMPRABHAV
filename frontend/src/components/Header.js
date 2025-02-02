@@ -47,9 +47,9 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <a href="https://forms.gle/Hcogzn1QKBxKXKUbA" target="_blank" rel="noopener noreferrer">
-            <button>Register</button>
-          </a>
+          <a href="https://forms.gle/Hcogzn1QKBxKXKUbA" target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); window.open('https://forms.gle/Hcogzn1QKBxKXKUbA', '_blank'); }}>
+  <button>Register</button>
+</a>
         </form>
       </div>
     </header>

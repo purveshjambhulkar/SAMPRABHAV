@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.footer {
+    background-color: #1a1b2e;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-about {
+    max-width: 500px;
+    line-height: 1.6;
+    color: #b7b7b7;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #b7b7b7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #b7b7b7;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2a2b3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #3a3b4d;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2a2b3d;
+    color: #b7b7b7;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-about {
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="logo.png" alt="Company Logo" class="footer-logo">
+                <p class="footer-about">
+                    Samprabhav - Union of Magnates, is a national pharma colloquium held by students of DOPM as a continuation of our yearly custom. The colloquium provides the top pharmaceutical minds in the nation with a forum for interaction, discussion, and the establishment of new connections.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <i class="far fa-clock"></i>
+                    <p>Mon - Fri: 09:00 - 18:00</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <p>Tushar Utane: +91-8888 146 469</p>
+                </div>
+                <div class="contact-info">
+                    <i class="far fa-envelope"></i>
+                    <p>info@samprabhav-niperm.com</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Department of Pharmaceutical Management, NIPER-Mohali Sector-67, S.A.S. Nagar (Mohali)-160062, Punjab (India).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Copyright 2024 All Rights Reserved by Samprabhav</p>
+        </div>
+    </footer>
+</body>
+</html>

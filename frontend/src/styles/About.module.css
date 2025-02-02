@@ -1,0 +1,159 @@
+/* About.module.css */
+
+.aboutSection {
+  position: relative;
+  padding: 120px 0;
+}
+
+.autoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Space between columns */
+  justify-content: center; /* Center columns in mobile view */
+}
+
+/* Content Column */
+.contentColumn {
+  flex: 1;
+  max-width: 50%; /* Take up half the width in full-screen */
+  padding: 0 20px; /* Add some padding */
+}
+
+/* Image Column */
+.imageColumn {
+  flex: 1;
+  max-width: 50%; /* Take up half the width in full-screen */
+  padding: 0 20px; /* Add some padding */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+/* Inner Column Styling */
+.innerColumn {
+  position: relative;
+}
+
+.secTitle {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.secTitle .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Blue color */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.secTitle h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #007bff; /* Blue color */
+  margin-top: 20px;
+  line-height: 1.4;
+  text-align: center; /* Centered the heading */
+}
+
+.secTitle .text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff5733; /* Changed color to a warmer tone */
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Image Styling */
+.imageBox {
+  position: relative;
+}
+
+.imageBox img {
+  border-radius: 50%;
+  border: 15px solid #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Image and Animation */
+.imageBox::before {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  height: 120%;
+  width: 120%;
+  background-image: url(../assests/icons/shape-2.png); /* Add your background image path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  animation: dizzling 10s infinite;
+  transition: all 300ms ease;
+  z-index: 0;
+}
+
+@keyframes dizzling {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack columns vertically in mobile view */
+    align-items: center; /* Center columns in mobile view */
+    gap: 30px; /* Reduce gap between stacked columns */
+  }
+
+  .contentColumn,
+  .imageColumn {
+    max-width: 100%; /* Full width for both columns in mobile view */
+    padding: 0; /* Remove padding in mobile view */
+  }
+
+  .secTitle .title {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .secTitle h2 {
+    font-size: 30px; /* Adjust font size for mobile */
+  }
+
+  .secTitle .text {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .imageBox img {
+    border-radius: 10px; /* Reduce border radius for mobile */
+  }
+
+  .imageBox::before {
+    right: -5%; /* Adjust background image position for mobile */
+    top: -5%;
+    height: 110%;
+    width: 110%;
+  }
+}

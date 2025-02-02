@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Speakers.css';
+import styles from '../styles/Speakers.module.css';
 
 // Import speaker images from "../assests/Speakers/"
 import speaker1 from "../assests/Speakers/1.png";
@@ -29,7 +29,7 @@ const buckets = [
   },
   {
     title: "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence (Speaker to be determined)",
-    speakers: [] // No speaker yet
+    speakers: []
   },
   {
     title: "Redefining Talent Paradigms: Crafting Future Workforce",
@@ -50,28 +50,26 @@ const buckets = [
 
 const Speakers = () => {
   return (
-    <div className="speakers-section">
-      <div className="container">
+    <div className={styles.speakersSection}>
+      <div className={styles.container}>
         {/* Section Title */}
-        <div className="meeta-section-title text-center">
-          <h4 className="sub-title">Speakers</h4>
-          <h2 className="main-title">World Class Speakers</h2>
+        <div className={`${styles.meetaSectionTitle} text-center`}>
+          <h4 className={styles.subTitle}>Speakers</h4>
+          <h2 className={styles.mainTitle}>World Class Speakers</h2>
         </div>
         <br /><br />
 
         {buckets.map((bucket, index) => (
           <div key={index}>
-            <div className="sec-title text-center">
-              <h3 className="title">
-                {bucket.title}
-              </h3>
+            <div className={`${styles.secTitle} text-center`}>
+              <h3 className={styles.title}>{bucket.title}</h3>
             </div>
-            <div className="row gy-5 meeta-speakers-row" style={{ justifyContent: "center" }}>
+            <div className={`row gy-5 ${styles.meetaSpeakersRow}`} style={{ justifyContent: "center" }}>
               {bucket.speakers.length > 0 ? (
                 bucket.speakers.map((speaker) => (
                   <div className="col-lg-4 col-sm-6" key={speaker.id}>
-                    <div className="single-speaker">
-                      <div className="speaker-image">
+                    <div className={styles.singleSpeaker}>
+                      <div className={styles.speakerImage}>
                         <a href={`./speakers?spid=${speaker.id}`}>
                           <img 
                             src={speakerImages[(speaker.id - 1) % speakerImages.length]} 
@@ -79,11 +77,11 @@ const Speakers = () => {
                           />
                         </a>
                       </div>
-                      <div className="speaker-content">
-                        <h4 className="speaker-name">
+                      <div className={styles.speakerContent}>
+                        <h4 className={styles.speakerName}>
                           <a href="#">{speaker.name}</a>
                         </h4>
-                        <p className="speaker-designation">
+                        <p className={styles.speakerDesignation}>
                           {speaker.designation}
                         </p>
                       </div>
