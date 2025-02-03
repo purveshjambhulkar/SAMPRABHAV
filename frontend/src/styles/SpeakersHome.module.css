@@ -1,0 +1,280 @@
+/*====================================================================
+    🌟 Stylish & Modern Speakers Section (Final Enhancements)
+====================================================================*/
+
+.speakersSection {
+  position: relative;
+  padding: 120px 0 90px;
+  background: linear-gradient(20deg, rgba(28,139,210,0.6), rgba(28,139,210,0.3)), 
+              url('../assests/Speakers/background.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
+}
+/* ✅ Gradient Text for "World Class Speakers" */
+.meetaSectionTitle .mainTitle {
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffcc00, #ff5733);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Improved Visibility for Section Title */
+.meetaSectionTitle .subTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #faf2d5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Different Color for Bucket Titles (Above Speaker Boxes) with Gradient */
+/* ✅ Different Color for Bucket Titles (Above Speaker Boxes) with Gradient */
+.secTitle .title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  
+  
+  background: linear-gradient(45deg, #ffff00, #ff6b00);
+  
+  /* Option 2: Vibrant Purple to Pink Gradient */
+  /* background: linear-gradient(45deg, #8a2be2, #ff1493); */
+  
+  /* Option 3: Neon Green to Bright Coral */
+  /* background: linear-gradient(45deg, #39ff14, #ff4500);   */
+  
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 100%;
+}
+/*====================================================================
+    🎭 Speaker Row and Container Styling
+====================================================================*/
+.speakerRowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      gap: 8%;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.speakerCardWrapper {
+  flex: 0 0 auto;
+}
+
+.noSpeakerMessage {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 18px;
+}
+
+/*====================================================================
+    🎭 Speaker Card Styling (Equal Heights)
+====================================================================*/
+.singleSpeaker {
+  background: linear-gradient(90deg, #ffffff, #f7f7f7);
+  border-radius: 30px;
+  text-align: center;
+  padding: 23px 32px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 333px;
+  height: 333px; /* Set a fixed height to ensure consistency */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.singleSpeaker:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #ffffff, #f2f2f2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.singleSpeaker:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Centered & Vibrant Speaker Images with Circular Background */
+.speakerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Add the circular background image */
+.speakerImage::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background-image: url('../assests/Speakers/speakerbg.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Speaker image styling */
+.speakerImage img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.singleSpeaker:hover .speakerImage img {
+  transform: scale(1.08);
+  border-color: #ffcc00;
+}
+
+/* ✅ Speaker Content Styling */
+.speakerContent {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.speakerName {
+  font-size: 22px;
+  font-weight: 800;
+  color: #101130;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.speakerName a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.speakerName a:hover {
+  color: #ffcc00;
+}
+
+/* ✅ Speaker Designation (no italic styling) */
+.speakerDesignation {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.singleSpeaker:hover .speakerDesignation {
+  color: #1c8bd2;
+}
+
+/*====================================================================
+    📱 Responsive Fixes
+====================================================================*/
+@media (max-width: 576px) {
+  .meetaSectionTitle .mainTitle {
+    font-size: 32px;
+  }
+
+  .meetaSectionTitle .subTitle {
+    font-size: 18px;
+  }
+
+  .speakerRowContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .speakerCardWrapper {
+    flex: 0 1 100%;
+    max-width: 300px;
+  }
+
+  .singleSpeaker {
+    padding: 20px;
+    width: 100%; /* Makes the speaker card full-width on small screens */
+  }
+
+  .speakerName {
+    font-size: 18px;
+  }
+
+  .speakerDesignation {
+    font-size: 14px;
+  }
+
+  .secTitle .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meetaSectionTitle .mainTitle {
+    font-size: 40px;
+  }
+
+  .speakerRowContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .speakerCardWrapper {
+    flex: 0 1 100%;
+    max-width: 300px;
+  }
+
+  .singleSpeaker {
+    padding: 25px;
+    width: 100%; /* Makes the speaker card full-width on medium screens */
+  }
+
+  .speakerName {
+    font-size: 20px;
+  }
+
+  .speakerDesignation {
+    font-size: 15px;
+  }
+
+  .secTitle .title {
+    font-size: 28px;
+  }
+}

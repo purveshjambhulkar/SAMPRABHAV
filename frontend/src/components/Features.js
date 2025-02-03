@@ -9,16 +9,12 @@ import conferenceIcon from "../assests/Features/conference.png";
 import studentIcon from "../assests/Features/student.png";
 import universityIcon from "../assests/Features/university.png";
 import dealIcon from "../assests/Features/deal.png";
-import topicIcon from "../assests/Features/topic.png";
-import testimonialIcon from "../assests/Features/testimonial.png";
 
 const featuresData = [
-  { title: "Speakers", count: 12, icon: conferenceIcon, link: "#speakers" },
+  { title: "Speakers", count: 12, icon: conferenceIcon, hasPlus: true, link: "#speakers" },
   { title: "Students", count: 800, icon: studentIcon, hasPlus: true },
   { title: "Colleges", count: 40, icon: universityIcon, hasPlus: true },
   { title: "Sponsors", count: 11, icon: dealIcon, hasPlus: true, link: "#sponsors" },
-  { title: "Topics", count: 5, icon: topicIcon, hasPlus: true },
-  { title: "Testimonials", count: 5, icon: testimonialIcon, link: "/testimonials" },
 ];
 
 const Features = () => {
@@ -53,11 +49,11 @@ const Features = () => {
       <h2 className={styles.featuresTitle}>
         Discover <span className={styles.highlightText}>Our Amazing Features</span>
       </h2>
-      <p className={styles.description}>
+      {/* <p className={styles.description}>
         Explore the core features that make our event truly unique. These are
         designed to empower you, enhance your experience, and make a lasting
         impact.
-      </p>
+      </p> */}
       <div className={styles.featuresContainer}>
         {featuresData.map((feature, index) => (
           <div className={`${styles.featureCard} ${isVisible ? styles.isVisible : ""}`} key={index}>

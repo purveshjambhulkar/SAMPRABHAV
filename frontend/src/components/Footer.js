@@ -52,11 +52,11 @@ const Footer = () => {
           </div>
           <div className="contact-info">
             <BsTelephone size={18} />
-            <p>Prathamesh Jambhulkar: +91 9373208758</p>
+            <p>Prathamesh Jambhulkar:<br/> +91 9373208758</p>
           </div>
           <div className="contact-info">
             <BsTelephone size={18} />
-            <p>Aarti Prakash: +91 6204888594</p>
+            <p>Aarti Prakash:<br/> +91 6204888594</p>
           </div>
           <div className="contact-info">
             <HiOutlineMail size={20} />

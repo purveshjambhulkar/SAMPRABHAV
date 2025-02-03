@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "../styles/Glimpse.css";
+import "../styles/Glimpse.css";  // Or "../styles/Glimpse.module.css" if using CSS modules
 import { FaArrowRight, FaSearchPlus, FaArrowLeft } from "react-icons/fa";
 import logo from "../assests/black-logo.png";
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 
 // Import images
 import img1 from "../assests/glimpse/1.jpg";
@@ -30,28 +31,13 @@ import abShape2 from "../assests/icons/ab-shape-2.png";
 
 // Create an array of gallery images
 const images = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16,
 ];
 
 // Chief Guest and Guest of Honor
 const chiefGuests = [
-  "Mr. Ashok Goyal (Chief Guest, Founder, Director & CEO of Tirupati Group & Chairman of Pontika Aerotech)",
   "Dr. Sanjeev Juneja (Guest of Honor, Founder, Divisa Herbals Pvt. Ltd. & SBS Group of Companies)",
+  "Mr. Ashok Goyal (Chief Guest, Founder, Director & CEO of Tirupati Group & Chairman of Pontika Aerotech)",
 ];
 
 const guestSpeakers = [
@@ -83,10 +69,7 @@ const Glimpse = () => {
   const [page, setPage] = useState(0);
   const pageSize = 9;
   const totalPages = Math.ceil(images.length / pageSize);
-  const currentImages = images.slice(
-    page * pageSize,
-    page * pageSize + pageSize
-  );
+  const currentImages = images.slice(page * pageSize, page * pageSize + pageSize);
 
   const handlePrev = () => {
     if (page > 0) setPage(page - 1);
@@ -107,13 +90,28 @@ const Glimpse = () => {
   return (
     <section className="glimpse">
       {/* Logo and Go Back Button at the top */}
-      <div className="top-nav">
-        <img src={circleBlue} alt="decorative" className="bg-decor decor-1" />
-        <img src={logo} alt="Samprabhav Logo" className="logo" />
-        <button onClick={handleGoBack} className="back-button">
-          <FaArrowLeft size={24} />
-          <span className="back-text">Go Back</span>
-        </button>
+      <div className="topNav">
+        <div className="logoContainer">
+          <img src={logo} alt="Samprabhav Logo" className="logo" />
+        </div>
+
+        <ul className="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><Link to="/glimpse">Glimpses</Link></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="/faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div className="backBtnContainer">
+          <button onClick={handleGoBack} className="backButton">
+            <FaArrowLeft size={24} className="arrowIcon" />
+            <span className="backText">Go Back</span>
+          </button>
+        </div>
       </div>
 
       {/* Background decorative images */}
@@ -126,7 +124,7 @@ const Glimpse = () => {
 
       <div className="glimpse-container">
         {/* Extra decorative image */}
-        <img src={abShape2} alt="extra decorative" className="bg-extra" />
+        {/* <img src={abShape2} alt="extra decorative" className="bg-extra" /> */}
 
         {/* Main Heading and Description */}
         <h1 className="glimpse-heading">Samprabhav 2024</h1>

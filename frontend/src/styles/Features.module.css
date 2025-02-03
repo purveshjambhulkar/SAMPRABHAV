@@ -33,6 +33,9 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: slideIn 1s forwards;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .description {
@@ -69,12 +72,13 @@
   padding: 30px;
   width: 220px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
   margin-bottom: 30px;
   opacity: 1;
   transform: translateY(0);
+  perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 .featureCard.isVisible {
@@ -83,23 +87,40 @@
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #f7f7f7;
+  cursor: pointer;
 }
 
-.featureIcon {
-  font-size: 50px;
+.featureCard .featureIcon {
+  display: flex;
+  justify-content: center; /* Center the image */
+  align-items: center; /* Align the image vertically */
+  height: 80px; /* Set a fixed height to maintain image size */
   margin-bottom: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.featureCard:hover .featureIcon {
+  transform: rotateY(180deg); /* Flip the image on hover */
 }
 
 .featureIcon img {
-  width: 60px;
-  max-width: 100%;
+    max-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  .featureIcon img {
+    max-width: 50%;
+  }
 }
 
 .featureCount {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: bold;  
   color: #222856;
   margin: 15px 0;
 }

@@ -4,14 +4,15 @@ import { UserCheck, Award, GraduationCap, CalendarCheck, ChevronDown, ChevronUp 
 import "../styles/FAQ.css";
 import { FaArrowRight, FaSearchPlus, FaArrowLeft } from 'react-icons/fa';
 import logo from '../assests/black-logo.png';
+import { Link } from 'react-router-dom';
 
 
-// Import decorative background images
-import circleBlue from '../assests/icons/icon-circle-1.png';
-import newCircle from '../assests/icons/newCircle.png';
-import iconDots from '../assests/icons/icon-dots.png';
-import shape2 from '../assests/icons/shape-2.png';
-import abShape2 from '../assests/icons/ab-shape-2.png';
+
+import circleBlue from "../assests/icons/circle-blue.png";
+import newCircle from "../assests/icons/newCircle.png";
+import iconDots from "../assests/icons/icon-dots.png";
+import shape2 from "../assests/icons/shape-2.png";
+import abShape2 from "../assests/icons/ab-shape-2.png";
 
 const faqs = [
   { 
@@ -48,15 +49,34 @@ export default function FAQ() {
 
   return (
     <div className="faq-container">
+
+
        {/* Logo and Go Back Button at the top */}
-            <div className="top-nav">
-              <img src={circleBlue} alt="decorative" className="bg-decor decor-1" />
-              <img src={logo} alt="Samprabhav Logo" className="logo" />
-              <button onClick={handleGoBack} className="back-button">
-                <FaArrowLeft size={24} />
-                <span className="back-text">Go Back</span>
-              </button>
-            </div>
+            <div className="topNav">
+        <div className="logoContainer">
+          <img src={logo} alt="Samprabhav Logo" className="logo" />
+        </div>
+
+        <ul className="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><Link to="/glimpse">Glimpses</Link></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="/faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div className="backBtnContainer">
+          <button onClick={handleGoBack} className="backButton">
+            <FaArrowLeft size={24} className="arrowIcon" />
+            <span className="backText">Go Back</span>
+          </button>
+        </div>
+      </div>
+
+
       <h2 className="faq-title">Frequently Asked Questions</h2>
       <p className="faq-description">These are the most commonly asked questions about the event.</p>
       <p className="faq-description-2">Can't tind what you're looking tor? <a href="#">Chat to our friendl team!</a></p>

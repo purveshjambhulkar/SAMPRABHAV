@@ -1,18 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Section1 from "./components/Section1";
 import Footer from "./components/Footer";
 import Schedule from "./components/Schedule";
 import Timer from "./components/Timer";
-import Speakers from "./components/Speakers";
+// import SpeakersHome from "./components/SpeakersHome";
 import About from "./components/About";
 import Features from "./components/Features";
 import Sponsors from "./components/Sponsors";
 import Glimpse from "./components/Glimpse"; // Import the Glimpse component
-import FAQ from "./components/FAQ"; // Import FAQ component
+import FAQ from "./components/FAQ"; // Import FAQ c mponent
 import Testimonial from "./components/Testimonials";
-
+import AboutHome from "./components/AboutHome";
+import Speakers from "./components/Speaker";
+import SpeakersHome from "./components/SpeakersHome";
 const App = () => {
   return (
     <Router>
@@ -42,17 +43,14 @@ const App = () => {
                 <section id="timer">
                   <Timer />
                 </section>
-                <section id="about">
-                  <About />
+                <section id="aboutHome">
+                  <AboutHome />
                 </section>
                 <section id="features">
                   <Features />
                 </section>
                 <section id="speakers">
-                  <Speakers />
-                </section>
-                <section id="sponsors">
-                  <Sponsors />
+                  <SpeakersHome />
                 </section>
                 <section id="schedule">
                   <Schedule />
@@ -70,8 +68,7 @@ const App = () => {
                 {/* <Navbar /> */}
                 <section id="faq">
                   <FAQ />/
-                <Footer />
-
+                  <Footer />
                 </section>
               </>
             }
@@ -83,9 +80,38 @@ const App = () => {
                 {/* <Navbar /> */}
                 <section id="testimonials">
                   <Testimonial />
-                <Footer />
-
+                  <Footer />
                 </section>
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                {/* <Navmini /> */}
+                <About />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/sponsors"
+            element={
+              <>
+                {/* <Navmini /> */}
+                <Sponsors />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/speakers"
+            element={
+              <>
+                {/* <Navmini /> */}
+                <Speakers />
+                <Footer />
               </>
             }
           />

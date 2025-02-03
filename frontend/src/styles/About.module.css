@@ -1,159 +1,371 @@
-/* About.module.css */
-
-.aboutSection {
-  position: relative;
-  padding: 120px 0;
-}
-
-.autoContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px; /* Space between columns */
-  justify-content: center; /* Center columns in mobile view */
-}
-
-/* Content Column */
-.contentColumn {
-  flex: 1;
-  max-width: 50%; /* Take up half the width in full-screen */
-  padding: 0 20px; /* Add some padding */
-}
-
-/* Image Column */
-.imageColumn {
-  flex: 1;
-  max-width: 50%; /* Take up half the width in full-screen */
-  padding: 0 20px; /* Add some padding */
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-}
-
-/* Inner Column Styling */
-.innerColumn {
-  position: relative;
-}
-
-.secTitle {
-  position: relative;
-  margin-bottom: 20px;
-  background-color: #f4f4f4;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.secTitle .title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #007bff; /* Blue color */
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center;
-}
-
-.secTitle h2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #007bff; /* Blue color */
-  margin-top: 20px;
-  line-height: 1.4;
-  text-align: center; /* Centered the heading */
-}
-
-.secTitle .text {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #ff5733; /* Changed color to a warmer tone */
-  line-height: 1.6;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* Image Styling */
-.imageBox {
-  position: relative;
-}
-
-.imageBox img {
-  border-radius: 50%;
-  border: 15px solid #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Ensure the image is responsive */
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Background Image and Animation */
-.imageBox::before {
-  content: "";
-  position: absolute;
-  right: -10%;
-  top: -10%;
-  height: 120%;
-  width: 120%;
-  background-image: url(../assests/icons/shape-2.png); /* Add your background image path */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  animation: dizzling 10s infinite;
-  transition: all 300ms ease;
-  z-index: 0;
-}
-
-@keyframes dizzling {
-  0% {
-    transform: rotate(0);
+/* ===============================
+   About Section & General Layout
+   =============================== */
+   .aboutSection {
+    position: relative;
+    padding: 0px 0;
+    background-color: #f9f9f9;
   }
-  50% {
-    transform: rotate(5deg);
+  
+  .autoContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 31px 20px;
   }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  
   .row {
-    flex-direction: column; /* Stack columns vertically in mobile view */
-    align-items: center; /* Center columns in mobile view */
-    gap: 30px; /* Reduce gap between stacked columns */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Space between columns */
+    justify-content: center;
   }
-
-  .contentColumn,
-  .imageColumn {
-    max-width: 100%; /* Full width for both columns in mobile view */
-    padding: 0; /* Remove padding in mobile view */
+  
+  /* ======================
+     Top Navigation Bar
+     ====================== */
+  .topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 2rem;
+    background: url('../assests/bg.jpg') center center / cover no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-
-  .secTitle .title {
-    font-size: 18px; /* Adjust font size for mobile */
+  
+  /* Logo Container */
+  .logoContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
-
+  
+  .logo {
+    height: 80px;
+    width: auto;
+    display: block;
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+    flex: 3;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a:hover {
+    color: #ffdd57;
+  }
+  
+  /* Back Button Container */
+  .backBtnContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .backButton {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .backButton:hover {
+    color: #ffdd57;
+  }
+  
+  .arrowIcon {
+    margin-right: 5px;
+  }
+  
+  .backText {
+    font-size: 14px;
+  }
+  
+  /* ======================
+     Content Column Styling
+     ====================== */
+  .contentColumn {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+    /* background-color: #ffffff; */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .innerColumn {
+    position: relative;
+  }
+  
+  .secTitle {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .secTitle:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  .title:hover {
+    color: #ff5733;
+  }
+  
   .secTitle h2 {
-    font-size: 30px; /* Adjust font size for mobile */
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 20px;
+    line-height: 1.4;
+    text-align: center;
+    transition: color 0.3s ease;
   }
-
-  .secTitle .text {
-    font-size: 16px; /* Adjust font size for mobile */
+  
+  .secTitle h2:hover {
+    color: #007bff;
   }
+  
+  .text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.6;
+    text-align: left;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .text:hover {
+    color: #007bff;
+    transform: translateX(5px);
+  }
+  
+  /* ======================
+     Image Column Styling
+     ====================== */
+  .imageColumn {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageBox {
+    position: relative;
+  }
+  
 
   .imageBox img {
-    border-radius: 10px; /* Reduce border radius for mobile */
+    border-radius: 50%;
+    border: 15px solid transparent; /* Change border to transparent */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2; /* Ensure image is above the background */
+    background: white; /* Add a white background to the image */}
+ 
+    .imageBox::before {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: -10%;
+      height: 120%;
+      width: 120%;
+      background-image: url("../assests/icons/shape-2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      animation: dizzling 10s infinite;
+      transition: all 300ms ease;
+      z-index: 1;
+       filter: hue-rotate(180deg) brightness(1) saturate(1.5);
+    }
+  @keyframes dizzling {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
   }
-
-  .imageBox::before {
-    right: -5%; /* Adjust background image position for mobile */
-    top: -5%;
-    height: 110%;
-    width: 110%;
+  
+  /* ======================
+     Responsive Design
+     ====================== */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .contentColumn,
+    .imageColumn {
+      max-width: 100%;
+      padding: 0;
+    }
+    .title {
+      font-size: 18px;
+    }
+    .secTitle h2 {
+      font-size: 30px;
+    }
+    .text {
+      font-size: 16px;
+    }
+    .imageBox img {
+      border-radius: 10px;
+    }
+    .imageBox::before {
+      right: -5%;
+      top: -5%;
+      height: 110%;
+      width: 110%;
+    }
+  
+    /* Stack top nav items vertically */
+    .topNav {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .logo {
+      height: 50px;
+    }
+    .navLinks {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .backButton {
+      font-size: 14px;
+    }
+    .backText {
+      font-size: 12px;
+    }
   }
-}
+  
+  /* Styling for new sections */
+  .newSections {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  /* Gradient background for sections */
+  .section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Apply gradient text to section titles */
+  .sectionTitle {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: math;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #6bc9c9, #134a67);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  /* Subheading for host section */
+  .subHeading {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(to right, #006d6d, #005f7f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  /* Bullet Points Styling */
+  .bulletPoints {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  /* Gradient effect for bullet point backgrounds */
+  .bulletPoints li {
+    font-size: 16px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background: linear-gradient(to right, #d1f3f3, #d0ebff);
+    border-left: 5px solid #0077b6;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bulletPoints li:hover {
+    background: linear-gradient(to right, #a8e6e6, #a6d8ff);
+    transform: scale(1.05);
+  }
+  
+  /* Icon Styling */
+  .bulletIcon {
+    color: #0077b6;
+    font-size: 20px;
+  }
+  
+  .text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .text p {
+    margin-bottom: 15px;
+  }
+  

@@ -1,0 +1,38 @@
+/* Main Navbar Container */
+.navbar-simple {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #006f76, #0286c8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo Styling */
+  .navbar-simple__logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Go Back Button */
+  .navbar-simple__back-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for Back Button */
+  .navbar-simple__back-btn:hover {
+    color: #cccccc;
+  }
+  
+  /* Text beside the icon */
+  .navbar-simple__back-text {
+    margin-left: 0.5rem;
+  }
+  
