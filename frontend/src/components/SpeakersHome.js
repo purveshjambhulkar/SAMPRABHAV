@@ -37,7 +37,7 @@ const buckets = [
     title: "Redefining Talent Paradigms: Crafting Future Workforce",
     speakers: [
       { id: 5, name: "Megha Soni", designation: "Associate Director-People Success, Solutionec", linkedin: "https://www.linkedin.com/in/megha-soni" },
-      { id: 6, name: "Uday Kanth", designation: "Senior Manager- HR, Trinity Life Sciences", linkedin: "https://www.linkedin.com/in/udaykanthg" }
+      { id: 6, name: "Uday Kanth", designation: "Senior Manager-HR, Trinity Life Sciences", linkedin: "https://www.linkedin.com/in/udaykanthg" }
     ]
   },
   {

@@ -12,7 +12,7 @@ const About = () => {
             <div className={styles.innerColumn}>
               <div className={styles.secTitle}>
                 <span className={styles.title}>About Event</span>
-                <h2>Welcome to the Samprabhav</h2>
+                <h2>Welcome to Samprabhav</h2>
                 <div className={styles.text}>
                   Samprabhav – Union of Magnates, is a grand event where industry experts converge with aspiring minds, creating a platform to ignite ideas that can drive transformative changes in the pharmaceutical sector. With five focal points, the event thoughtfully covers diverse industry dimensions, providing a well-rounded experience. Each session concludes with an open Q&A, ensuring equal opportunities for students to gain deeper insights into industry operations. This mega event stands as a testament to student management, impactful speaker sessions, and innovative brainstorming, culminating in a remarkable achievement for the Department of Pharmaceutical Management, NIPER S.A.S. Nagar (Mohali).
                 </div>

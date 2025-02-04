@@ -66,7 +66,7 @@ const About = () => {
             <div className={styles.innerColumn}>
               <div className={styles.secTitle}>
                 <span className={styles.title}>About Event</span>
-                <h2>Welcome to the Samprabhav</h2>
+                <h2>Welcome to Samprabhav</h2>
                 <div className={styles.text}>
                   Samprabhav – Union of Magnates, is a grand event where
                   industry experts converge with aspiring minds, creating a

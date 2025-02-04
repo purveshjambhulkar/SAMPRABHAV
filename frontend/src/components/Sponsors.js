@@ -30,7 +30,7 @@ const sponsorsData = {
     {
       name: "PharmaSapience",
       logo: SAPIENS,
-      type: "CoTitle Sponsor",
+      type: "Co-Title Sponsor",
       className: styles.titleBorder,
       color: "#800020",
     }
