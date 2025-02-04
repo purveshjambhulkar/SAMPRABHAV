@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaLinkedinIn, FaInstagram, FaFacebookF, FaPhoneAlt, FaEnvelope, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styles from "../styles/Contact.module.css"; // Import CSS module
-import logo from "../assests/black-logo.png";
+import logo from "../assests/logo.png";
 
 const Contact = () => {
   const handleGoBack = () => {
@@ -35,13 +35,13 @@ const Contact = () => {
             <Link to="/glimpse">Glimpses</Link>
           </li>
           <li>
-            <Link to="#schedule">Schedule</Link>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 

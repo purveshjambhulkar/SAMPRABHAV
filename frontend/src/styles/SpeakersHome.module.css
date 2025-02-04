@@ -16,7 +16,7 @@
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #ffcc00, #ff5733);
+  background: linear-gradient(90deg, #ffffff, #ffcc00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
@@ -179,7 +179,7 @@
   color: #101130;
   margin-bottom: 5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
 }
 
 .speakerName a {

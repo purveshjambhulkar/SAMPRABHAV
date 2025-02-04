@@ -5,10 +5,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0px 32px;
-      margin-bottom: 0rem;
-   background: url('../assests/bg.jpg') center center / cover no-repeat;
-      border-radius: 8px;
+      padding: 10px 20px;
+      /* margin-bottom: 2rem; */
+      background: url('../assests/bg.jpg') center center / cover no-repeat;
+      /* border-radius: 8px; */
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
@@ -144,7 +144,7 @@
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: linear-gradient(90deg, #ffcc00, #ff5733);
+    background: linear-gradient(90deg, #ffffff, #ffcc00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
@@ -307,7 +307,7 @@
     color: #101130;
     margin-bottom: 5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
   }
   
   .speakerName a {

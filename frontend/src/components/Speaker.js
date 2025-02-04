@@ -87,13 +87,13 @@ const Speakers = () => {
             <Link to="/glimpse">Glimpses</Link>
           </li>
           <li>
-            <Link to="#schedule">Schedule</Link>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 
@@ -140,7 +140,7 @@ const Speakers = () => {
                   />
                 </div>
                 <div className={styles.specialGuestContent}>
-                  <h3 className={styles.specialGuestTitle}>Honorary Chairperson</h3>
+                  <h3 className={styles.specialGuestTitle}>Chairperson</h3>
                   <p className={styles.specialGuestName}>Dr. Vinay Lohariwala
                   </p>
                   <p className={styles.specialGuestDesignation}>Managing Director at Innova Captab Ltd </p>

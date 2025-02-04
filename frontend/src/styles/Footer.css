@@ -60,6 +60,8 @@
   }
   
   /* Section Heading Styling */
+
+ 
   .footer-section h3 {
     color: #ffffff;
     font-size: 1.35rem;
@@ -233,7 +235,7 @@
     }
     .contact-info {
       justify-content: center;
-      text-align: left;
+      text-align: center;
     }
     .footer-links a::after {
       left: 50%;

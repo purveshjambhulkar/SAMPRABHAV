@@ -71,7 +71,7 @@ return (
 </header> */}
  {/* Testimonials Section */}
   <section className="testimonial-section">
-    <h2 className="testimonial-title">What people say about us</h2>
+    <h2 className="testimonial-title">Samprabhav Speaks: Stories of Impact</h2>
     <div className="testimonial-list">
       {testimonials.map((testimonial, index) => {
         const bgColor = backgroundColors[index % backgroundColors.length];

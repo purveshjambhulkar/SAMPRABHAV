@@ -41,13 +41,13 @@ const About = () => {
             <Link to="/glimpse">Glimpses</Link>
           </li>
           <li>
-            <Link to="#schedule">Schedule</Link>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 

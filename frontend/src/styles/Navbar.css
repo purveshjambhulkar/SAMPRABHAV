@@ -337,14 +337,14 @@ nav {
 @media (width > 768px) {
   nav {
     position: static;
-    padding-block: 2rem 0;
+    padding-block: 0rem 0;
     padding-inline: 1rem;
     max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 
   .nav__header {

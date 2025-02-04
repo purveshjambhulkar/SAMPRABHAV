@@ -63,8 +63,8 @@ const Header = () => {
     textTransform: "uppercase",
     lineHeight: "1.8",
     letterSpacing: "1px",
-    marginBottom: "1rem",
-    marginTop: "4rem", // Added top margin for spacing
+    marginBottom: "-1rem",
+    marginTop: "0rem", // Added top margin for spacing
   };
 
   const eventInfoStyle = {
@@ -95,7 +95,7 @@ const Header = () => {
             fontSize: "5vw",
             textAlign: "center",
             lineHeight: "1.2",
-            marginBottom: "1.5rem",
+            marginBottom: "-0.5rem",
             textShadow: "2px 2px 10px rgba(0, 0, 0, 0.7)",
             wordWrap: "break-word",
             whiteSpace: "normal",
@@ -104,7 +104,7 @@ const Header = () => {
             WebkitBackgroundClip: "text",
           }}
         >
-          SAMPRABHAV <br /> 2025
+          SAMPRABHAV 2025
         </p>
         <p
           className="sponsor-text"
@@ -119,7 +119,7 @@ const Header = () => {
             marginBottom: "1rem",
           }}
         >
-          <span>Sponsored by </span>
+          <span>Powered by </span>
           <span
             style={{
               fontWeight: "bold",
@@ -130,7 +130,7 @@ const Header = () => {
             AdametNext
           </span>{" "}
           <br />
-          <span>Co-sponsored by </span>
+          <span>Co-powered by </span>
           <span
             style={{
               fontWeight: "bold",

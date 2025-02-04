@@ -23,16 +23,16 @@
   /* ======================
      Top Navigation Bar
      ====================== */
-  .topNav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    margin-bottom: 5rem;
-    background: url('../assests/bg.jpg') center center / cover no-repeat;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+     .topNav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      margin-bottom: 2rem;
+      background: url('../assests/bg.jpg') center center / cover no-repeat;
+      /* border-radius: 8px; */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
   
   /* Logo Container */
   .logoContainer {
@@ -169,12 +169,14 @@
   
   /* Headings & Descriptions */
   .glimpse-heading {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    color: #3295ce;
-    position: relative;
-  }
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;  background: linear-gradient(135deg, #6e5252 0%, #0c1b1b 50%, #000000 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
   
   /* Text description fixes */
   .glimpse-description {
@@ -187,18 +189,21 @@
   }
   
   /* Section Title Fixes */
-  .section-title {
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #ddd;
-    text-align: center;
-    font-size: 1.8rem; /* Slightly reduced to fit better */
-    margin-bottom: 1rem;
-    font-weight: bold;
-    color: #3295ce;
-    max-width: 800px; /* Prevents excessively long titles */
-    margin-left: auto;
-    margin-right: auto;
-  }
+ .section-title {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+  font-size: 1.8rem; 
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(135deg, #6e5252 0%, #0c1b1b 50%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
   
   /* Custom List Styles for Speakers & Topics */
   /* Fix for list alignment */
@@ -217,8 +222,9 @@
     font-size: 1.1rem;
     color: #444;
     margin-bottom: 0.8rem;
+    margin: 24px;
     line-height: 1.6; /* Ensures proper spacing */
-    word-break: break-word; /* Prevents overflow issues */
+    word-break: normal; /* Prevents overflow issues */
   }
   
   /* Icon alignment */
@@ -243,7 +249,7 @@
     border: 2px solid #00bcd4;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   }
-  
+ 
   .glimpse-item img {
     width: 100%;
     height: auto;
@@ -362,6 +368,8 @@
     left: 5%;
     width: 213px;
     animation-delay: 4s;
+    filter: hue-rotate(280deg) saturate(1.5);
+
   }
   
   .decor-4 {
@@ -406,6 +414,9 @@
   @media (max-width: 768px) {
     .glimpse-grid {
       grid-template-columns: 1fr 1fr;
+    }
+    .glimpse-item{
+      margin: 24px;
     }
   }
   

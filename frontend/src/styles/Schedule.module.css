@@ -228,3 +228,70 @@
   from { opacity: 0; transform: translateY(50px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
+/* Add these media queries at the end of your CSS */
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px; /* Move timeline to the left */
+  }
+
+  .scheduleItem {
+    width: 100%;
+    padding-left: 50px; /* Add space for timeline */
+    left: 0;
+    animation-delay: 0.2s !important;
+  }
+
+  .scheduleItem.right,
+  .scheduleItem.left {
+    left: 0;
+  }
+
+  .left::before,
+  .right::before {
+    left: 18px; /* Position dots aligned with timeline */
+    right: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdownIcon {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .bucketTitle {
+    font-size: 1.1rem;
+  }
+
+  .bucketDate {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scheduleItem {
+    padding-left: 40px;
+  }
+
+  .left::before,
+  .right::before {
+    left: 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .bucketTitle {
+    font-size: 1rem;
+  }
+}

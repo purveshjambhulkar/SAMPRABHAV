@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import "../styles/FAQ.css";
 import { FaArrowRight, FaSearchPlus, FaArrowLeft } from "react-icons/fa";
-import logo from "../assests/black-logo.png";
+import logo from "../assests/logo.png";
 import { Link } from "react-router-dom";
 
 import circleBlue from "../assests/icons/circle-blue.png";
@@ -82,13 +82,13 @@ export default function FAQ() {
             <Link to="/glimpse">Glimpses</Link>
           </li>
           <li>
-            <Link to="#schedule">Schedule</Link>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 

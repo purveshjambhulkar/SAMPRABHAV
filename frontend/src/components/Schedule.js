@@ -4,7 +4,7 @@ import styles from "../styles/Schedule.module.css"; // Import CSS Module
 const scheduleData = [
   {
     bucket: "Fueling Pharma Success: The Power of Digital and Global Marketing",
-    date: "March 1, 2025",
+    date: "22 February",
     speakers: [
       { name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd." },
       { name: "Manish Bajaj", designation: "Cluster Head at Dr. Reddy’s Laboratories" },
@@ -12,7 +12,7 @@ const scheduleData = [
   },
   {
     bucket: "Pioneering Trends: Reshaping the Pharmaceutical Landscape",
-    date: "March 2, 2025",
+    date: "22 February",
     speakers: [
       {
         name: "Gopal Rao",
@@ -23,12 +23,12 @@ const scheduleData = [
   },
   {
     bucket: "Re-envisioning Boundaries: Transformative Strategies for Business and Product Excellence",
-    date: "March 3, 2025",
+    date: "22 February",
     speakers: [],
   },
   {
     bucket: "Redefining Talent Paradigms: Crafting Future Workforce",
-    date: "March 4, 2025",
+    date: "23 February",
     speakers: [
       { name: "Megha Soni", designation: "Associate Director, People Success, Solutionec" },
       { name: "Uday Kanth", designation: "Senior Manager, HR, Trinity Life Sciences" },
@@ -36,7 +36,7 @@ const scheduleData = [
   },
   {
     bucket: "Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
-    date: "March 5, 2025",
+    date: "23 February",
     speakers: [
       { name: "Virendra Kumar", designation: "Founder & CEO, AdametNext" },
       { name: "Ritu Rana", designation: "Senior Manager, Forecasting CoE, Axtria" },

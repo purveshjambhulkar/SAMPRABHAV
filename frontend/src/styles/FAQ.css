@@ -5,10 +5,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0px 32px;
+        padding: 10px 20px;
         margin-bottom: 2rem;
-        background: linear-gradient(90deg, #006f76, #0286c8);
-        border-radius: 8px;
+        background: url('../assests/bg.jpg') center center / cover no-repeat;
+        /* border-radius: 8px; */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
     

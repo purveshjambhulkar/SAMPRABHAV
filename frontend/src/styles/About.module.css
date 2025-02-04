@@ -30,7 +30,7 @@
     padding: 10px 20px;
     margin-bottom: 2rem;
     background: url('../assests/bg.jpg') center center / cover no-repeat;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -43,7 +43,7 @@
   }
   
   .logo {
-    height: 80px;
+    height: 108px;
     width: auto;
     display: block;
   }
@@ -195,13 +195,13 @@
 
   .imageBox img {
     border-radius: 50%;
-    border: 15px solid transparent; /* Change border to transparent */
+    border: 15px solid white; /* Change border to transparent */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     height: auto;
     position: relative;
     z-index: 2; /* Ensure image is above the background */
-    background: transparent; /* Add a white background to the image */}
+    background: white; /* Add a white background to the image */}
  
     .imageBox::before {
       content: "";

@@ -1,136 +1,181 @@
-import React, { useState } from "react";
-import styles from "../styles/ScheduleNav.module.css";
-import { motion } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa";
-
-const Schedule = () => {
-  const [selectedDay, setSelectedDay] = useState("Day 1");
-  const [openDropdown, setOpenDropdown] = useState(null);
-
-  const toggleDropdown = (index) => {
-    setOpenDropdown(openDropdown === index ? null : index);
-  };
-
+import React, { useState } from 'react';
+import styles from '../styles/ScheduleNav.module.css';
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import logo from "../assests/logo.png";
+const ScheduleRoadmap = () => {
+  const [activeDay, setActiveDay] = useState('22 February');
+  
   const scheduleData = [
+    // Day 1 - 22 February
     {
-      day: "Day 1",
-      buckets: [
-        {
-          title:
-            "Fueling Pharma Success: The Power of Digital and Global Marketing",
-          speakers: [
-            "Hirak Bose - Senior Vice President, Sales and Marketing, Lupin Ltd.",
-            "Manish Bajaj- Cluster Head at Dr Reddy’s Laboratories",
-          ],
-        },
-        {
-          title: "Pioneering Trends: Reshaping the Pharmaceutical Landscape",
-          speakers: [
-            "Biologics - Mr. Gopal Rao, Associate Vice President Business Development and Licensing, Biocon Biologics",
-            "Medical devices - Ajayy Kumar Shukla- Sales Manager (Medtronic)",
-          ],
-        },
-        {
-          title:
-            "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence",
-          speakers: [],
-        },
+      bucket: "9:30 - 11:00 AM INAUGURAL EVENT",
+      date: "22 February",
+      speakers: [
+        { name: "Dr. Subba Rao Chaganti", designation: "Executive Coach, Mentor, Author" },
+        { name: "Guest of Honor", designation: "To be announced" }
       ],
     },
     {
-      day: "Day 2",
-      buckets: [
-        {
-          title: "Redefining Talent Paradigms: Crafting Future Workforce",
-          speakers: [
-            "Megha Soni - Associate Director-People Success, Solutionec",
-            "Uday Kanth - Senior Manager- HR, Trinity Life Sciences",
-          ],
-        },
-        {
-          title:
-            "Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
-          speakers: [
-            "CI - Mr. Virendra Kumar (Founder & CEO, AdametNext)",
-            "Forecasting - Ms. Ritu Rana (Senior Manager-Forecasting CoE, Axtria)",
-            "Strategic Consulting - Mr. Suresh Pemmaraju (Associate Vice President, Molekule Consulting)",
-          ],
-        },
+      bucket: "11:00 - 11:30 AM Tea Break",
+      date: "22 February",
+      speakers: [],
+    },
+    {
+      bucket: "11:30 - 1:00PM BUCKET 1: Fueling Pharma Success: The Power of Digital and Global Marketing",
+      date: "22 February",
+      speakers: [
+        { name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd." },
+        { name: "Manish Bajaj", designation: "Cluster Head at Dr. Reddy's Laboratories" },
       ],
+    },
+    {
+      bucket: "1:00 - 2:00 PM Lunch",
+      date: "22 February",
+      speakers: [],
+    },
+    {
+      bucket: "2:00 - 3:30 PM BUCKET 2: Pioneering Trends: Reshaping the Pharmaceutical Landscape",
+      date: "22 February",
+      speakers: [
+        {
+          name: "Gopal Rao",
+          designation: "Associate Vice President, Business Development and Licensing, Biocon Biologics",
+        },
+        { name: "Ajayy Kumar Shukla", designation: "Sales Manager, Medtronic" },
+      ],
+    },
+    {
+      bucket: "3:30 – 5:00 PM BUCKET 3: Re-envisioning Boundaries: Transformative Strategies for Business and Product Excellence",
+      date: "22 February",
+      speakers: [],
+    },
+    // Day 2 - 23 February
+    {
+      bucket: "9:30 – 11:00 AM INCEPTION CEREMONY",
+      date: "23 February",
+      speakers: [
+        { name: "Dr. Vinay Lohariwala", designation: "Managing Director at Innova Captab Ltd" }
+      ],
+    },
+    {
+      bucket: "11:00 - 11:30 AM Tea Break",
+      date: "23 February",
+      speakers: [],
+    },
+    {
+      bucket: "11:30 - 1:00 PM BUCKET 4: Redefining Talent Paradigms: Crafting Future Workforce",
+      date: "23 February",
+      speakers: [
+        { name: "Megha Soni", designation: "Associate Director, People Success, Solutionec" },
+        { name: "Uday Kanth", designation: "Senior Manager, HR, Trinity Life Sciences" },
+      ],
+    },
+    {
+      bucket: "1:00 - 2:00 PM Lunch",
+      date: "23 February",
+      speakers: [],
+    },
+    {
+      bucket: "2:00 - 3:30 PM BUCKET 5: Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
+      date: "23 February",
+      speakers: [
+        { name: "Virendra Kumar", designation: "Founder & CEO, AdametNext" },
+        { name: "Ritu Rana", designation: "Senior Manager, Forecasting CoE, Axtria" },
+        { name: "Suresh Pemmaraju", designation: "Associate Vice President, Molekule Consulting" },
+      ],
+    },
+    {
+      bucket: "3:30 – 5:00 PM Felicitation of Sponsors & Closing Ceremony",
+      date: "23 February",
+      speakers: [],
     },
   ];
 
-  return (
-    <div className={styles.scheduleContainer}>
-      <h2 className={styles.heading}>Event Schedule</h2>
+  const filteredSchedule = scheduleData.filter(item => item.date === activeDay);
 
-      {/* Day Selection Buttons */}
-      <div className={styles.daySelector}>
-        {scheduleData.map((dayData, index) => (
-          <button
-            key={index}
-            className={`${styles.dayButton} ${
-              selectedDay === dayData.day ? styles.active : ""
-            }`}
-            onClick={() => setSelectedDay(dayData.day)}
-          >
-            {dayData.day}
+  const parseEventInfo = (bucket) => {
+    const splitIndex = bucket.indexOf('M') + 1; // Find the position of 'M' in AM/PM
+    const timeStr = bucket.substring(0, splitIndex).trim(); // Extract the time
+    const title = bucket.substring(splitIndex).trim(); // Extract the event title
+    return { time: timeStr, title };
+  };
+  
+  const handleGoBack = () => {
+    window.history.back();
+  };
+
+  return (
+    
+    <div>
+      <div className={styles.topNav}>
+        <div className={styles.logoContainer}>
+          <img src={logo} alt="Samprabhav Logo" className={styles.logo} />
+        </div>
+
+        <ul className={styles.navLinks}>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/speakers">Speakers</a></li>
+          <li><a href="/sponsors">Sponsors</a></li>
+          <li><Link to="/glimpse">Glimpses</Link></li>
+          <li><a href="/schedule">Schedule</a></li>
+          <li><a href="/faq">FAQs</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+
+        <div className={styles.backBtnContainer}>
+          <button onClick={handleGoBack} className={styles.backButton}>
+            <FaArrowLeft size={24} className={styles.arrowIcon} />
+            <span className={styles.backText}>Go Back</span>
           </button>
-        ))}
+        </div>
       </div>
 
-      {/* Roadmap Layout */}
-      <div className={styles.roadmapContainer}>
-        <div className={styles.roadmapLine}></div>
 
-        {scheduleData
-          .filter((dayData) => dayData.day === selectedDay)
-          .map((dayData) => (
-            <div key={dayData.day} className={styles.daySection}>
-              {dayData.buckets.map((bucket, index) => (
-                <motion.div
-                  key={index}
-                  className={`${styles.bucket} ${
-                    index % 2 === 0 ? styles.leftBucket : styles.rightBucket
-                  }`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.3 }}
-                >
-                  <div
-                    className={styles.bucketHeader}
-                    onClick={() => toggleDropdown(`${dayData.day}-${index}`)}
-                  >
-                    <h4>{bucket.title}</h4>
-                    <FaChevronDown
-                      className={`${styles.dropdownIcon} ${
-                        openDropdown === `${dayData.day}-${index}`
-                          ? styles.open
-                          : ""
-                      }`}
-                    />
+     <div className={styles.scheduleContainer}>
+        <div className={styles.dayButtons}>
+          <button
+            className={`${styles.dayButton} ${activeDay === '22 February' ? styles.active : styles.inactive}`}
+            onClick={() => setActiveDay('22 February')}
+          >
+            Day 1
+          </button>
+          <button
+            className={`${styles.dayButton} ${activeDay === '23 February' ? styles.active : styles.inactive}`}
+            onClick={() => setActiveDay('23 February')}
+          >
+            Day 2
+          </button>
+        </div>
+
+        <div className={styles.timeline}>
+    {filteredSchedule.map((event, index) => {
+      const { time, title } = parseEventInfo(event.bucket); // Fix destructuring
+      return (
+        <div key={index} className={styles.timelineEvent}>
+          <div className={styles.timelineContent}>
+            <div className={styles.timelineTime}>{time}</div>
+            <div className={styles.timelineActivity}>{title}</div> {/* Fix activity to title */}
+            {event.speakers.length > 0 && (
+              <div className={styles.speakerList}>
+                {event.speakers.map((speaker, idx) => (
+                  <div key={`${index}-${idx}`} className={styles.speaker}> {/* Fix missing key */}
+                    <div className={styles.speakerName}>{speaker.name}</div>
+                    <div className={styles.speakerDesignation}>{speaker.designation}</div>
                   </div>
-                  {openDropdown === `${dayData.day}-${index}` && (
-                    <motion.div
-                      className={styles.dropdownContent}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                    >
-                      <ul>
-                        {bucket.speakers.map((speaker, idx) => (
-                          <li key={idx}>{speaker}</li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          ))}
+                ))}
+              </div>
+            )}
+          </div>
+          <div className={styles.timelineDot}></div>
+        </div>
+      );
+    })}
+  </div>
       </div>
     </div>
   );
 };
 
-export default Schedule;
+export default ScheduleRoadmap;

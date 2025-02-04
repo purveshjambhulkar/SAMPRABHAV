@@ -35,14 +35,14 @@ const Navbar = () => {
         <li><a href="/speakers">Speakers</a></li>
         <li><a href="/sponsors">Sponsors</a></li>
        <li><Link to="/glimpse">Glimpses</Link></li>
-        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="/schedule">Schedule</a></li>
         <li><a href="/faq">FAQs</a></li>
         <li><a href="/contact">Contact Us</a></li>
       </ul>
 
       <div className="nav__btns">
         <a href="https://forms.gle/Hcogzn1QKBxKXKUbA" target="_blank" rel="noopener noreferrer">
-          <button className="btn sign__in">Register</button>
+          <button className="btn sign__in">Registration</button>
         </a>
       </div>
     </nav>

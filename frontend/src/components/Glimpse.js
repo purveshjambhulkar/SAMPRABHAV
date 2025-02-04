@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Glimpse.css";  // Or "../styles/Glimpse.module.css" if using CSS modules
 import { FaArrowRight, FaSearchPlus, FaArrowLeft } from "react-icons/fa";
-import logo from "../assests/black-logo.png";
+import logo from "../assests/logo.png";
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 
 // Import images
@@ -113,13 +113,13 @@ const Glimpse = () => {
             <Link to="/glimpse">Glimpses</Link>
           </li>
           <li>
-            <Link to="#schedule">Schedule</Link>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 
@@ -133,7 +133,7 @@ const Glimpse = () => {
 
       {/* Background decorative images */}
       <div className="bg-decorations">
-        <img src={circleBlue} alt="decorative" className="bg-decor decor-1" />
+        {/* <img src={circleBlue} alt="decorative" className="bg-decor decor-1" /> */}
         <img src={newCircle} alt="decorative" className="bg-decor decor-2" />
         <img src={iconDots} alt="decorative" className="bg-decor decor-3" />
         <img src={shape2} alt="decorative" className="bg-decor decor-4" />
