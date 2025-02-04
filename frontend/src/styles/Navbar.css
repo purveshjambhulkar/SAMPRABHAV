@@ -426,6 +426,7 @@ nav {
 /* Navbar in Mobile View */
 @media (max-width: 768px) {
   .nav__header {
+    background-image: url("../assests/bg.jpg") !important; ;
     padding: 1rem; /* Reduce padding to fit better in mobile view */
     background: transparent; /* Make the navbar background transparent */
     position: fixed; /* Ensure navbar is fixed at the top */
@@ -434,8 +435,11 @@ nav {
     right: 0;
     z-index: 1000; /* Ensure it's above the carousel */
   }
-
+  .nav__links a{
+    color:gold !important;
+  }
   .nav__links {
+    color:gold !important;
     padding: 2rem 1rem;
     gap: 1.5rem; /* Reduce the gap between links */
     background-color: transparent; /* Make the navbar links background transparent */
@@ -476,6 +480,7 @@ nav {
     visibility: hidden;
   }
   .nav__links.open {
+    background-image: url("../assests/bg.jpg") !important;
     visibility: visible;
   }
   .nav__menu__btn {
@@ -789,7 +794,7 @@ section {
   /* Department Name */
   .header__content h1 {
     font-size: 18px !important;
-    padding-top: 58px !important;
+    padding-top: 96px !important;
   }
 
   /* Event Name */
