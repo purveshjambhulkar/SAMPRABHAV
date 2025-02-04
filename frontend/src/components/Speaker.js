@@ -108,7 +108,7 @@ const Speakers = () => {
       <div className={styles.container}>
         {/* Section Title */}
         <div className={`${styles.meetaSectionTitle} text-center`}>
-          <h4 className={styles.subTitle}>Speakers</h4>
+          {/* <h4 className={styles.subTitle}>Speakers</h4> */}
           <h2 className={styles.mainTitle}>World Class Speakers</h2>
         </div>
         <br /><br />
