@@ -722,15 +722,15 @@ section {
 
   .event-name {
     font-size: 3.5rem; /* Increase font size for better readability */
-    line-height: 4rem;
+    line-height: 4rem !important;
   }
 
   .event-date {
-    font-size: 1.2rem;
-  }
+    font-size: 1.2rem !important; }
+  
 
   .event-info {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 }
 
@@ -794,7 +794,7 @@ section {
   /* Department Name */
   .header__content h1 {
     font-size: 18px !important;
-    padding-top: 96px !important;
+    padding-top: 20rem !important;
   }
 
   /* Event Name */
