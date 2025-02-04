@@ -187,7 +187,7 @@ const Glimpse = () => {
         </ul>
 
         {/* Image Gallery with Pagination */}
-        <h2 className="section-title">A Glimpse</h2>
+        <h2 className="section-title">Glimpses</h2>
         <div className="glimpse-grid">
           {currentImages.map((img, index) => (
             <div key={index} className="glimpse-item">

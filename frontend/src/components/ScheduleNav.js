@@ -13,7 +13,7 @@ const ScheduleRoadmap = () => {
       date: "22 February",
       speakers: [
         { name: "Dr. Subba Rao Chaganti", designation: "Executive Coach, Mentor, Author" },
-        { name: "Guest of Honor", designation: "To be announced" }
+        { name: "Dr. Vinay Lahoriwala", designation: "Honorary Chairperson" }
       ],
     },
     {
@@ -22,7 +22,7 @@ const ScheduleRoadmap = () => {
       speakers: [],
     },
     {
-      bucket: "11:30 - 1:00PM BUCKET 1: Fueling Pharma Success: The Power of Digital and Global Marketing",
+      bucket: "11:30 - 1:00 PM BUCKET 1: Fueling Pharma Success: The Power of Digital and Global Marketing",
       date: "22 February",
       speakers: [
         { name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd." },
@@ -52,10 +52,11 @@ const ScheduleRoadmap = () => {
     },
     // Day 2 - 23 February
     {
-      bucket: "9:30 – 11:00 AM INCEPTION CEREMONY",
+      bucket: "9:30 - 11:00 AM BUCKET 4: Redefining Talent Paradigms: Crafting Future Workforce",
       date: "23 February",
       speakers: [
-        { name: "Dr. Vinay Lohariwala", designation: "Managing Director at Innova Captab Ltd" }
+        { name: "Megha Soni", designation: "Associate Director, People Success, Solutionec" },
+        { name: "Uday Kanth", designation: "Senior Manager, HR, Trinity Life Sciences" },
       ],
     },
     {
@@ -64,20 +65,7 @@ const ScheduleRoadmap = () => {
       speakers: [],
     },
     {
-      bucket: "11:30 - 1:00 PM BUCKET 4: Redefining Talent Paradigms: Crafting Future Workforce",
-      date: "23 February",
-      speakers: [
-        { name: "Megha Soni", designation: "Associate Director, People Success, Solutionec" },
-        { name: "Uday Kanth", designation: "Senior Manager, HR, Trinity Life Sciences" },
-      ],
-    },
-    {
-      bucket: "1:00 - 2:00 PM Lunch",
-      date: "23 February",
-      speakers: [],
-    },
-    {
-      bucket: "2:00 - 3:30 PM BUCKET 5: Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
+      bucket: "11:30 - 1:00 PM BUCKET 5: Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
       date: "23 February",
       speakers: [
         { name: "Virendra Kumar", designation: "Founder & CEO, AdametNext" },
@@ -85,6 +73,20 @@ const ScheduleRoadmap = () => {
         { name: "Suresh Pemmaraju", designation: "Associate Vice President, Molekule Consulting" },
       ],
     },
+    
+    {
+      bucket: "1:00 - 2:00 PM Lunch",
+      date: "23 February",
+      speakers: [],
+    },
+    {
+      bucket: "2:00 - 3:30 PM EXCLUSIVE CEREMONY",
+      date: "23 February",
+      speakers: [
+        { name: "Not Decided", designation: "Guest of Honor" },
+      ],
+    },
+    
     {
       bucket: "3:30 – 5:00 PM Felicitation of Sponsors & Closing Ceremony",
       date: "23 February",
