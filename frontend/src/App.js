@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Section1 from "./components/Section1";
@@ -14,6 +15,8 @@ import Testimonial from "./components/Testimonials";
 import AboutHome from "./components/AboutHome";
 import Speakers from "./components/Speaker";
 import SpeakersHome from "./components/SpeakersHome";
+import Contact from "./components/Contact";
+import ScheduleNav from "./components/ScheduleNav";
 const App = () => {
   return (
     <Router>
@@ -52,6 +55,9 @@ const App = () => {
                 <section id="speakers">
                   <SpeakersHome />
                 </section>
+                <section id="testimonials">
+                  <Testimonial />
+                </section>
                 <section id="schedule">
                   <Schedule />
                 </section>
@@ -67,7 +73,7 @@ const App = () => {
               <>
                 {/* <Navbar /> */}
                 <section id="faq">
-                  <FAQ />/
+                  <FAQ />
                   <Footer />
                 </section>
               </>
@@ -111,6 +117,26 @@ const App = () => {
               <>
                 {/* <Navmini /> */}
                 <Speakers />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                {/* <Navmini /> */}
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/schedule"
+            element={
+              <>
+                {/* <Navmini /> */}
+                <ScheduleNav />
                 <Footer />
               </>
             }

@@ -64,7 +64,7 @@ const Header = () => {
     lineHeight: "1.8",
     letterSpacing: "1px",
     marginBottom: "1rem",
-    marginTop: "2rem", // Added top margin for spacing
+    marginTop: "4rem", // Added top margin for spacing
   };
 
   const eventInfoStyle = {
@@ -184,6 +184,9 @@ const Header = () => {
             (e.target.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)")
           }
           onMouseOut={(e) => (e.target.style.boxShadow = "")}
+          onClick={() =>
+            window.open("https://forms.gle/Hcogzn1QKBxKXKUbA", "_blank")
+          }
         >
           REGISTER NOW
         </button>

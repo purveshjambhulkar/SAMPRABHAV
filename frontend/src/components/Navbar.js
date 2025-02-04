@@ -37,7 +37,7 @@ const Navbar = () => {
        <li><Link to="/glimpse">Glimpses</Link></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="/faq">FAQs</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
       </ul>
 
       <div className="nav__btns">

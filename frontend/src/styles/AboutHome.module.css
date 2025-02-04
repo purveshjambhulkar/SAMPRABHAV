@@ -122,7 +122,7 @@
     height: auto;
     position: relative;
     z-index: 2; /* Ensure image is above the background */
-    background: white; /* Add a white background to the image */}
+    background: transparent; /* Add a white background to the image */}
  
     .imageBox::before {
       content: "";

@@ -1,6 +1,4 @@
 /* Timer container (Places Timer in Between Sections) */
-/* Timer.css */
-
 .timer-container {
   display: flex;
   justify-content: center;
@@ -8,58 +6,58 @@
   width: 100%;
   padding: 30px 0;
   position: relative; 
-  margin-top: -120px; /* This pulls the timer upward; adjust the value as needed */
-  z-index: 10; /* Ensure it sits above the other sections */
+  margin-top: -120px; /* Adjust as needed */
+  z-index: 10;
 }
-
-/* Keep the rest of your Timer styling unchanged */
-
 
 /* Timer Styling */
 .timer {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevents wrapping */
   justify-content: center;
-  gap: 30px;  /* Reduced gap */
+  gap: 20px;
   font-family: 'Roboto', sans-serif;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  padding: 30px;  /* Reduced padding */
+  padding: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   color: #fff;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  max-width: 80%; /* Shrink the overall size */
+  backdrop-filter: blur(10px);
+  max-width: 90%;
+  overflow-x: auto; /* Allows horizontal scrolling on very small screens */
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
-/* may be remove later */
+/* Time block styling */
 .time-block {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px;  /* Reduced padding */
-  background-color: rgba(255, 255, 255, 0.1); /* Light background for each block */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  min-width: 117px;  /* Reduced width */
+  min-width: 100px; /* Ensure all blocks fit in a row */
 }
 
 /* Number styling */
 .time-number {
-  font-size: 2.8rem;  /* Reduced font size */
+  font-size: 2.5rem;
   font-weight: 700;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 /* Label styling */
 .time-label {
-  font-size: 1rem;  /* Slightly smaller label font size */
+  font-size: 0.9rem;
   margin-top: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.8;
 }
 
-/* Hover effect for time blocks (disabled on mobile) */
+/* Hover effect for time blocks (enabled only for non-touch screens) */
 @media (hover: hover) {
   .time-block:hover {
     transform: scale(1.1);
@@ -75,20 +73,17 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .timer {
-    /* flex-direction: column; */
     gap: 10px;
-     /* Adjusted margin-top for smaller screens */
-    padding: 20px 0;
+    padding: 15px;
   }
 
   .time-block {
-    width: auto; /* or remove width/max-width overrides if not needed */
-    /* max-width: 160px; */
-    margin: auto;
+    padding: 8px;
+    min-width: 85px;
   }
 
   .time-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .time-label {
@@ -98,23 +93,23 @@
 
 @media (max-width: 480px) {
   .timer-container {
-    margin-top: -86px !important;
-    padding: 20px 0; /* Ensures proper spacing in mobile view */
+    margin-top: -86px;
+    padding: 20px 0;
   }
 
   .timer {
-    padding: 15px 7px;
-    gap: 8px;
+    padding: 10px;
+    gap: 5px;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
   }
 
   .time-block {
-    padding: 8px;
-    min-width: 70px;
-    
+    padding: 5px;
+    min-width: 75px;
   }
 
   .time-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .time-label {
