@@ -433,6 +433,7 @@ nav {
     top: 0; /* Align it to the top */
     left: 0;
     right: 0;
+    height: 5rem;
     z-index: 1000; /* Ensure it's above the carousel */
   }
   .nav__links a{

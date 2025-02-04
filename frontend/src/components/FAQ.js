@@ -105,8 +105,8 @@ export default function FAQ() {
         These are the most commonly asked questions about the event.
       </p>
       <p className="faq-description-2">
-        Can't tind what you're looking tor?{" "}
-        <a href="#">Chat to our friendl team!</a>
+        Can't find what you're looking for?{" "}
+        <a href="/contact">Chat to our friend team!</a>
       </p>
 
       <div className="faq-list">
