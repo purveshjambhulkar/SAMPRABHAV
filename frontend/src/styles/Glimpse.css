@@ -184,7 +184,8 @@
     color: #555;
     line-height: 1.8; /* Ensures better readability */
     max-width: 900px; /* Limits text width */
-    margin: 0 auto 2rem;
+  
+    margin: 1rem 1rem;
     text-align: center;
   }
   
@@ -222,9 +223,9 @@
     font-size: 1.1rem;
     color: #444;
     margin-bottom: 0.8rem;
-    margin: 24px;
-    line-height: 1.6; /* Ensures proper spacing */
-    word-break: normal; /* Prevents overflow issues */
+    margin: 14px;
+    line-height: 1.6;
+    word-break: break-word; /* Prevents overflow issues */
   }
   
   /* Icon alignment */
@@ -308,6 +309,7 @@
     align-items: center;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .pagination button {

@@ -103,27 +103,29 @@
   /* ======================
           Responsive Design
           ====================== */
-  @media (max-width: 768px) {
-    .topNav {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .logo {
-      height: 50px;
-    }
-    .navLinks {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-    .backButton {
-      font-size: 14px;
-    }
-    .backText {
-      font-size: 12px;
-    }
-  }
-
+          @media (max-width: 768px) {
+            .topNav {
+              flex-direction: column;
+              gap: 0px;
+              
+            }
+            .logo {
+              height: 150px;
+              margin-top: -2rem;
+            }
+            .navLinks {
+              flex-wrap: wrap;
+              justify-content: center;
+              margin-top: -2.3rem;
+              gap: 10px;
+            }
+            .backButton {
+              font-size: 14px;
+            }
+            .backText {
+              font-size: 12px;
+            }
+          }
 
   .scheduleContainer {
     max-width: 1200px;

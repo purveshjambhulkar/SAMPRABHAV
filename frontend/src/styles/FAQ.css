@@ -107,14 +107,17 @@
       @media (max-width: 768px) {
         .topNav {
           flex-direction: column;
-          gap: 10px;
+          gap: 0px;
+          
         }
         .logo {
-          height: 50px;
+          height: 150px;
+          margin-top: -2rem;
         }
         .navLinks {
           flex-wrap: wrap;
           justify-content: center;
+          margin-top: -2.3rem;
           gap: 10px;
         }
         .backButton {
