@@ -120,31 +120,9 @@ const Header = () => {
           }}
         >
           <span>Powered by - </span>
-          <span className="golden-glow-text"
-//             style={{
-//               fontFamily: "inherit",
-// fontWeight: "bolder",
-// color: "white",
-// textShadow: "0px 0px 10px rgba(255, 215, 0, 0.8), 0px 0px 20px rgba(255, 215, 0, 0.6), 0px 0px 30px rgba(255, 215, 0, 0.4)",
-// textDecoration: "underline"
-//             }}
-          >
-            AdametNext
-          </span>{" "}
-          <br />
+          <span className="golden-glow-text">AdametNext</span> <br />
           <span>Co-powered by - </span>
-          <span className="silver-glow-text"
-            // style={{
-            //   // fontFamily: "inherit",
-            //   // fontWeight: "bolder",
-            //   // color: "black",
-            //   // textDecoration: "underline",
-            //   // textShadow:
-            //   //   "0px 0px 15px rgba(255, 255, 255, 1.2), 0px 0px 25px rgba(255, 255, 255, 0.9), 0px 0px 35px rgba(255, 255, 255, 0.7)",
-            // }}
-          >
-            PharmaSapience
-          </span>
+          <span className="silver-glow-text">PharmaSapience</span>
         </p>
         <p
           className="event-date"
@@ -176,6 +154,7 @@ const Header = () => {
             fontWeight: "bold",
             backgroundColor: "rgb(0, 170, 255)",
             color: "white",
+            marginBottom:"1em",
             border: "none",
             borderRadius: "5px",
             cursor: "pointer",
