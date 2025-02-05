@@ -508,7 +508,7 @@ section {
 }
 @media (max-width: 768px) {
   .header__container{
-    overflow-y: auto;
+    overflow-y: clip;
   }
 }
 
