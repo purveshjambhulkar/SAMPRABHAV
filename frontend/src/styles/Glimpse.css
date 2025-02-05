@@ -185,7 +185,7 @@
     line-height: 1.8; /* Ensures better readability */
     max-width: 900px; /* Limits text width */
   
-    margin: 1rem 1rem;
+    margin: 0rem 13rem;
     text-align: center;
   }
   
@@ -419,6 +419,9 @@
     }
     .glimpse-item{
       margin: 24px;
+    }
+    .glimpse-description{
+      margin: 1rem 1rem;
     }
   }
   
