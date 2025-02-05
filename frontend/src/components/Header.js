@@ -169,7 +169,7 @@ const Header = () => {
           }
           onMouseOut={(e) => (e.target.style.boxShadow = "")}
           onClick={() =>
-            window.open("https://forms.gle/Hcogzn1QKBxKXKUbA", "_blank")
+            window.open("https://forms.gle/PGbHhvwEGfsx96FdA", "_blank")
           }
         >
           REGISTER NOW

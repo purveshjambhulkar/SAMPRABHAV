@@ -41,7 +41,7 @@ const Navbar = () => {
       </ul>
 
       <div className="nav__btns">
-        <a href="https://forms.gle/Hcogzn1QKBxKXKUbA" target="_blank" rel="noopener noreferrer">
+        <a href="https://forms.gle/PGbHhvwEGfsx96FdA" target="_blank" rel="noopener noreferrer">
           <button className="btn sign__in">Registration</button>
         </a>
       </div>

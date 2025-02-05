@@ -13,7 +13,7 @@ const ScheduleRoadmap = () => {
       date: "22 February",
       speakers: [
         { name: "Dr. Subba Rao Chaganti", designation: "Executive Coach, Mentor, Author" },
-        { name: "Dr. Vinay Lahoriwala", designation: "Honorary Chairperson" }
+        { name: "To be determined", designation: "Guest of Honor" }
       ],
     },
     {
@@ -27,6 +27,7 @@ const ScheduleRoadmap = () => {
       speakers: [
         { name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd." },
         { name: "Manish Bajaj", designation: "Cluster Head at Dr. Reddy's Laboratories" },
+        { name: "Tavinder Jit Singh Vasudeva", designation: "Cluster Head at Dr. Reddy’s Laboratories" },
       ],
     },
     {
@@ -52,7 +53,7 @@ const ScheduleRoadmap = () => {
     },
     // Day 2 - 23 February
     {
-      bucket: "9:30 - 11:00 AM BUCKET 4: Redefining Talent Paradigms: Crafting Future Workforce",
+      bucket: "9:30 - 10:30 AM BUCKET 4: Redefining Talent Paradigms: Crafting Future Workforce",
       date: "23 February",
       speakers: [
         { name: "Megha Soni", designation: "Associate Director, People Success, Solutionec" },
@@ -60,12 +61,12 @@ const ScheduleRoadmap = () => {
       ],
     },
     {
-      bucket: "11:00 - 11:30 AM Tea Break",
+      bucket: "10:30 - 11:00 AM Tea Break",
       date: "23 February",
       speakers: [],
     },
     {
-      bucket: "11:30 - 1:00 PM BUCKET 5: Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
+      bucket: "11:00 - 1:00 PM BUCKET 5: Pharma Horizons: Innovation, Analytics, and Strategic Transformation",
       date: "23 February",
       speakers: [
         { name: "Virendra Kumar", designation: "Founder & CEO, AdametNext" },
@@ -80,10 +81,10 @@ const ScheduleRoadmap = () => {
       speakers: [],
     },
     {
-      bucket: "2:00 - 3:30 PM EXCLUSIVE CEREMONY",
+      bucket: "2:00 - 3:30 PM INCEPTION CEREMONY",
       date: "23 February",
       speakers: [
-        { name: "Not Decided", designation: "Guest of Honor" },
+        { name: "Dr. Vinay Lahoriwala", designation: "Honorary Chairperson" }
       ],
     },
     

@@ -41,7 +41,7 @@ const Navbar2 = () => {
 
       <div className="nav__btns">
         <a
-          href="https://forms.gle/Hcogzn1QKBxKXKUbA"
+          href="https://forms.gle/1DuWSpaQY9DFwS6UA"
           target="_blank"
           rel="noopener noreferrer"
         >

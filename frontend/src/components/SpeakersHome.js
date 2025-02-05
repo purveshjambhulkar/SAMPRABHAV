@@ -11,15 +11,18 @@ import speaker6 from "../assests/Speakers/6.png";
 import speaker7 from "../assests/Speakers/7.png";
 import speaker8 from "../assests/Speakers/8.png";
 import speaker9 from "../assests/Speakers/9.png";
+import speaker10 from "../assests/Speakers/10.png";
 
-const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9];
+const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9,speaker10];
 
 const buckets = [
   {
     title: "Fueling Pharma Success: The Power of Digital and Global Marketing",
     speakers: [
       { id: 1, name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd.", linkedin: "https://www.linkedin.com/in/hirak-bose-a9233083" },
-      { id: 2, name: "Manish Bajaj", designation: "Cluster Head at Dr Reddy's Laboratories", linkedin: "https://www.linkedin.com/in/manish-bajaj-7b1993" }
+      { id: 2, name: "Manish Bajaj", designation: "Cluster Head at Dr Reddy's Laboratories", linkedin: "https://www.linkedin.com/in/manish-bajaj-7b1993" },
+      { id: 100, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
+
     ]
   },
   {
