@@ -811,3 +811,41 @@ section {
     text-align: center;
   }
 }
+
+
+
+
+.golden-glow-text {
+  font-family: inherit;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 
+    0px 0px 8px rgba(255, 200, 0, 1), 
+    0px 0px 16px rgba(255, 170, 0, 0.7), 
+    0px 0px 24px rgba(255, 140, 0, 0.5);
+  text-decoration: underline;
+  /* -webkit-text-stroke: 1px black; Black border around text */
+}
+
+.silver-glow-text {
+  font-family: inherit;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 
+    0px 0px 8px rgba(192, 192, 192, 1),  /* Silver */
+    0px 0px 16px rgba(220, 220, 220, 0.7), /* Light Gray */
+    0px 0px 24px rgba(255, 255, 255, 0.5); /* White Glow */
+  text-decoration: underline;
+  /* -webkit-text-stroke: 1px black; Black border around text */
+}
+.bronze-glow-text {
+  font-family: inherit;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 
+    0px 0px 8px rgba(205, 127, 50, 1),   /* Bronze */
+    0px 0px 16px rgba(180, 100, 40, 0.8), /* Copper */
+    0px 0px 24px rgba(139, 69, 19, 0.6);  /* Dark Bronze */
+  text-decoration: underline;
+  /* -webkit-text-stroke: 1px black; Black border around text */
+}

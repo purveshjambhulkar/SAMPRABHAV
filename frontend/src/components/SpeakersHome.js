@@ -29,10 +29,10 @@ const buckets = [
       { id: 4, name: "Ajay Kumar Shukla", designation: "Sales Manager (Medtronic)", linkedin: "https://www.linkedin.com/in/ajayy-kumar-shuklaa-090b501b", category: "Medical devices" }
     ]
   },
-  {
-    title: "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence (Speaker to be determined)",
-    speakers: []
-  },
+  // {
+  //   title: "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence (Speaker to be determined)",
+  //   speakers: []
+  // },
   {
     title: "Redefining Talent Paradigms: Crafting Future Workforce",
     speakers: [

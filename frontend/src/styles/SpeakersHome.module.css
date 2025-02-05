@@ -11,17 +11,13 @@
 }
 /* ✅ Gradient Text for "World Class Speakers" */
 .meetaSectionTitle .mainTitle {
-  font-size: 48px;
+  font-size: 58px;
   font-weight: 800;
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #ffffff, #ffcc00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  color: gold;
 }
-
 /* ✅ Improved Visibility for Section Title */
 .meetaSectionTitle .subTitle {
   font-size: 20px;
@@ -41,7 +37,7 @@
   text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   
   
-  background: linear-gradient(45deg, #ffff00, #ff6b00);
+ color: white;
   
   /* Option 2: Vibrant Purple to Pink Gradient */
   /* background: linear-gradient(45deg, #8a2be2, #ff1493); */
@@ -49,8 +45,8 @@
   /* Option 3: Neon Green to Bright Coral */
   /* background: linear-gradient(45deg, #39ff14, #ff4500);   */
   
-  -webkit-background-clip: text;
-  color: transparent;
+  /* -webkit-background-clip: text;
+  color: transparent; */
   background-size: 100% 100%;
 }
 /*====================================================================
