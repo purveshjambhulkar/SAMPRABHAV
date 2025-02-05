@@ -8,7 +8,7 @@ const scheduleData = [
     speakers: [
       { name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd." },
       { name: "Manish Bajaj", designation: "Cluster Head at Dr. Reddy’s Laboratories" },
-      { name: "Tavinder Jit Singh Vasudeva", designation: "Cluster Head at Dr. Reddy’s Laboratories" },
+      { name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs" },
     ],
   },
   {
