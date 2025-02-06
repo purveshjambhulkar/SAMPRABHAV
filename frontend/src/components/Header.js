@@ -63,8 +63,8 @@ const Header = () => {
     textTransform: "uppercase",
     lineHeight: "1.8",
     letterSpacing: "1px",
-    marginBottom: "-1rem",
-    marginTop: "0rem", // Added top margin for spacing
+    marginBottom: "0em",
+    marginTop: "3em", // Added top margin for spacing
   };
 
   const eventInfoStyle = {

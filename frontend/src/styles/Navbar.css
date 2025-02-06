@@ -796,6 +796,8 @@ section {
   .header__content h1 {
     font-size: 18px !important;
     padding-top: 15em !important;
+    margin-bottom: -1rem !important;
+    margin-top: 0rem !important;
   }
 
   /* Event Name */
