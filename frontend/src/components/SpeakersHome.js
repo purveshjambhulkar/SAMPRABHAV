@@ -17,12 +17,11 @@ const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker
 
 const buckets = [
   {
-    title: "Fueling Pharma Success: The Power of Digital and Global Marketing",
+    title: "Strategic Transformation: Integrating Innovation into Marketing & Commercialization",
     speakers: [
-      { id: 1, name: "Hirak Bose", designation: "Senior Vice President, Sales and Marketing, Lupin Ltd.", linkedin: "https://www.linkedin.com/in/hirak-bose-a9233083" },
-      { id: 2, name: "Manish Bajaj", designation: "Cluster Head at Dr Reddy's Laboratories", linkedin: "https://www.linkedin.com/in/manish-bajaj-7b1993" },
+      { id: 1, name: "Mr. Harit Mohan", designation: "Founder & CEO, Signicent, and Global Co-Chair TiE Univ. (TiE U)", linkedin: "https://www.linkedin.com/in/mohanharit" },
+      { id: 2, name: "Dr. Ankit Jain", designation: "Senior Segment Manager, Applied Genomics (Illumina)", linkedin: "https://www.linkedin.com/in/ankit-jain-34466b109" },
       { id: 100, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
-
     ]
   },
   {
