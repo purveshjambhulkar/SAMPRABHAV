@@ -13,6 +13,8 @@ import speaker7 from "../assests/Speakers/7.png";
 import speaker8 from "../assests/Speakers/8.png";
 import speaker9 from "../assests/Speakers/9.png";
 import speaker10 from "../assests/Speakers/10.png";
+import speaker11 from "../assests/Speakers/11.png";
+import speaker12 from "../assests/Speakers/12.png";
 
 
 import chiefGuestImage from "../assests/Speakers/chiefGuest.png"; // Replace with actual image
@@ -22,7 +24,7 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import logo from "../assests/logo.png";
 
-const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9,speaker10];
+const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9,speaker10, speaker11, speaker12];
 
 const buckets = [
   {
@@ -30,7 +32,7 @@ const buckets = [
     speakers: [
       { id: 1, name: "Mr. Harit Mohan", designation: "Founder & CEO, Signicent, and Global Co-Chair TiE Univ. (TiE U)", linkedin: "https://www.linkedin.com/in/mohanharit" },
       { id: 2, name: "Dr. Ankit Jain", designation: "Senior Segment Manager, Applied Genomics (Illumina)", linkedin: "https://www.linkedin.com/in/ankit-jain-34466b109" },
-      { id: 100, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
+      { id: 10, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
     ]
   },
   {
@@ -40,10 +42,13 @@ const buckets = [
       { id: 4, name: "Ajayy Kumar Shukla", designation: "Sales Manager (Medtronic)", linkedin: "https://www.linkedin.com/in/ajayy-kumar-shuklaa-090b501b", category: "Medical devices" }
     ]
   },
-  // {
-  //   title: "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence (Speaker to be determined)",
-  //   speakers: []
-  // },
+  {
+    title: "The Innovation Shield: Protecting Ideas, Powering Ventures",
+    speakers: [
+      { id: 11, name: "Ms. Komal Sharma Talwar", designation: "Founder of TT Consultants, Founder and Director of XL Scout", linkedin: "https://www.linkedin.com/in/komalsharmatalwar", category: "Biologics" },
+      { id: 12, name: "Mr. Satish Kumar Arora", designation: "President at TiE Chandigarh, Co-Founder of AppSmartz & GameSee Pvt. Ltd., Angel Investor", linkedin: "https://www.linkedin.com/in/skarora27", category: "Medical devices" }
+    ]
+  },
   {
     title: "Redefining Talent Paradigms: Crafting Future Workforce",
     speakers: [
@@ -164,7 +169,7 @@ const Speakers = () => {
                       <div className={styles.speakerImage}>
                         <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer">
                           <img 
-                            src={speakerImages[(speaker.id - 1) % speakerImages.length]} 
+                            src={speakerImages[speaker.id - 1]} 
                             alt={speaker.name} 
                           />
                         </a>
