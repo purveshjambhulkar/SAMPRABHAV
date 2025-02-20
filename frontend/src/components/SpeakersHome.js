@@ -21,20 +21,23 @@ const buckets = [
     speakers: [
       { id: 1, name: "Mr. Harit Mohan", designation: "Founder & CEO, Signicent, and Global Co-Chair TiE Univ. (TiE U)", linkedin: "https://www.linkedin.com/in/mohanharit" },
       { id: 2, name: "Dr. Ankit Jain", designation: "Senior Segment Manager, Applied Genomics (Illumina)", linkedin: "https://www.linkedin.com/in/ankit-jain-34466b109" },
-      { id: 100, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
+      { id: 10, name: "Tavinder Jit Singh Vasudeva", designation: "President & Chief Business Officer, Microlabs", linkedin: "https://www.linkedin.com/in/tavinder-jit-singh-vasudeva-86b5625" }
     ]
   },
   {
     title: "Pioneering Trends: Reshaping the Pharmaceutical Landscape",
     speakers: [
-      { id: 3, name: "Mr. Gopal Rao", designation: "Associate Vice President, Business Development and Licensing, Biocon Biologics", linkedin: "https://www.linkedin.com/in/gopal-rao-68936412", category: "Biologics" },
+      { id: 3, name: "Ms. Komal Sharma Talwar", designation: "Founder of TT Consultants, Founder and Director of XL Scout", linkedin: "https://www.linkedin.com/in/gopal-rao-68936412", category: "Biologics" },
       { id: 4, name: "Ajayy Kumar Shukla", designation: "Sales Manager (Medtronic)", linkedin: "https://www.linkedin.com/in/ajayy-kumar-shuklaa-090b501b", category: "Medical devices" }
     ]
   },
-  // {
-  //   title: "Re-envisioning boundaries: Transformative Strategies for Business and Product Excellence (Speaker to be determined)",
-  //   speakers: []
-  // },
+  {
+    title: "The Innovation Shield: Protecting Ideas, Powering Ventures",
+    speakers: [
+      { id: 11, name: "Mr. Gopal Rao", designation: "Associate Vice President, Business Development and Licensing, Biocon Biologics", linkedin: "https://www.linkedin.com/in/komalsharmatalwar", category: "Biologics" },
+      { id: 12, name: "Mr. Satish Kumar Arora", designation: "President at TiE Chandigarh, Co-Founder of AppSmartz & GameSee Pvt. Ltd., Angel Investor", linkedin: "https://www.linkedin.com/in/skarora27", category: "Medical devices" }
+    ]
+  },
   {
     title: "Redefining Talent Paradigms: Crafting Future Workforce",
     speakers: [
@@ -76,7 +79,7 @@ const SpeakersHome = () => {
                       <div className={styles.speakerImage}>
                         <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer">
                           <img 
-                            src={speakerImages[(speaker.id - 1) % speakerImages.length]} 
+                            src={speakerImages[speaker.id - 1]} 
                             alt={speaker.name} 
                           />
                         </a>
