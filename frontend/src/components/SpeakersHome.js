@@ -12,8 +12,10 @@ import speaker7 from "../assests/Speakers/7.png";
 import speaker8 from "../assests/Speakers/8.png";
 import speaker9 from "../assests/Speakers/9.png";
 import speaker10 from "../assests/Speakers/10.png";
+import speaker11 from "../assests/Speakers/11.png";
+import speaker12 from "../assests/Speakers/12.png";
 
-const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9,speaker10];
+const speakerImages = [speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, speaker9,speaker10, speaker11, speaker12];
 
 const buckets = [
   {
