@@ -29,14 +29,14 @@ const buckets = [
   {
     title: "Pioneering Trends: Reshaping the Pharmaceutical Landscape",
     speakers: [
-      { id: 3, name: "Ms. Komal Sharma Talwar", designation: "Founder of TT Consultants, Founder and Director of XL Scout", linkedin: "https://www.linkedin.com/in/gopal-rao-68936412", category: "Biologics" },
+      { id: 3, name: "Mr. Gopal Rao", designation: "Associate Vice President, Business Development and Licensing, Biocon Biologics", linkedin: "https://www.linkedin.com/in/gopal-rao-68936412", category: "Biologics" },
       { id: 4, name: "Ajayy Kumar Shukla", designation: "Sales Manager (Medtronic)", linkedin: "https://www.linkedin.com/in/ajayy-kumar-shuklaa-090b501b", category: "Medical devices" }
     ]
   },
   {
     title: "The Innovation Shield: Protecting Ideas, Powering Ventures",
     speakers: [
-      { id: 11, name: "Mr. Gopal Rao", designation: "Associate Vice President, Business Development and Licensing, Biocon Biologics", linkedin: "https://www.linkedin.com/in/komalsharmatalwar", category: "Biologics" },
+      { id: 11, name: "Ms. Komal Sharma Talwar", designation: "Founder of TT Consultants, Founder and Director of XL Scout", linkedin: "https://www.linkedin.com/in/komalsharmatalwar", category: "Biologics" },
       { id: 12, name: "Mr. Satish Kumar Arora", designation: "President at TiE Chandigarh, Co-Founder of AppSmartz & GameSee Pvt. Ltd., Angel Investor", linkedin: "https://www.linkedin.com/in/skarora27", category: "Medical devices" }
     ]
   },
